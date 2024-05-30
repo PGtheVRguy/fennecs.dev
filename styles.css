@@ -220,3 +220,24 @@ ul li {
   margin-right: auto;
   display: block;
 }
+
+
+#NavBar {
+  background-color: #001220;
+  overflow: hidden;
+  z-index: 420;
+}
+#NavBar a {
+  color: white;
+  text-align: center;
+  padding: 15px;
+  float: left;
+  display: block;
+  z-index: 420;
+}
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 420;
+}

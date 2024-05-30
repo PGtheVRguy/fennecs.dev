@@ -9,29 +9,16 @@
     <!-- Load external CSS styles -->
     <link rel="stylesheet" href="../../styles.css">
     <link rel="icon" type="image/x-icon" href="../../favicon.ico">
-
-    <!-- Internal styles -->
-</head>
-
-<body>
-    <div class="header">
-        <div class="spacer layer1"></div>
-        <img src="../../title.png" alt="Title Image" class="title", width = 40%, height = auto>
-        <div id="emitter-container"></div>
-    </div>
-    
-    
-
-    <div class="mainBody">
-        &nbsp
-        <p style="font-size: 50px; text-align: center;">1984: THE GAME</p>
-        <p style="font-size: 20px; text-align: center;">Based on George Orwells 1984</p>
-        <iframe frameborder="0" src="https://itch.io/embed-upload/10542269?color=333333" allowfullscreen="" width="800" height="740" style="margin: auto; text-align: center; display: block;"><a href="https://pgthevrguy.itch.io/1984">Play 1984 on itch.io</a></iframe>
-        <div id="textContainer" class="blogText"></div>
-    </div>
-    &nbsp
     <script>
-        // Function to fetch and display the text file content
+        function loadNavbar() {
+            fetch('../../navbar.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('NavBar').innerHTML = data;
+                })
+                .catch(error => console.error('Error loading navbar:', error));
+        }
+
         function fetchAndDisplayText() {
             console.log('Attempting to fetch text.txt...');
             fetch('text.txt')
@@ -53,9 +40,36 @@
                 });
         }
 
-        // Call the function to fetch and display text when the page loads
-        window.onload = fetchAndDisplayText;
+        window.onload = function() {
+            loadNavbar();
+            fetchAndDisplayText();
+        };
     </script>
+    <!-- Internal styles -->
+</head>
+
+
+
+
+
+<body>
+    <div id="NavBar"></div>
+    <div class="header">
+        <div class="spacer layer1"></div>
+        <img src="../../title.png" alt="Title Image" class="title", width = 40%, height = auto>
+        <div id="emitter-container"></div>
+    </div>
+    
+    
+
+    <div class="mainBody">
+        &nbsp
+        <p style="font-size: 50px; text-align: center;">1984: THE GAME</p>
+        <p style="font-size: 20px; text-align: center;">Based on George Orwells 1984</p>
+        <iframe frameborder="0" src="https://itch.io/embed-upload/10542269?color=333333" allowfullscreen="" width="800" height="740" style="margin: auto; text-align: center; display: block;"><a href="https://pgthevrguy.itch.io/1984">Play 1984 on itch.io</a></iframe>
+        <div id="textContainer" class="blogText"></div>
+    </div>
+    &nbsp
     <script src="../../scripts.js"></script>
 </body>
 <br>

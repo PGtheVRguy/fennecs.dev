@@ -7,25 +7,18 @@
     <title>fennecs.dev</title>
 
     <!-- Load external CSS styles -->
-    <link rel="stylesheet" href="../../styles.css">
+    <link rel="stylesheet" href="/styles.css">
     <link rel="icon" type="image/x-icon" href="../../favicon.ico">
-
-    <!-- Internal styles -->
-</head>
-
-<body>
-    <div class="header">
-        <div class="spacer layer1"></div>
-        <img src="../../title.png" alt="Title Image" class="title", width = 40%, height = auto>
-        <div id="emitter-container"></div>
-    </div>
-
-    <div class="mainBody">
-        <div id="textContainer" class="blogText"></div>
-    </div>
-
     <script>
-        // Function to fetch and display the text file content
+        function loadNavbar() {
+            fetch('../../navbar.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('NavBar').innerHTML = data;
+                })
+                .catch(error => console.error('Error loading navbar:', error));
+        }
+
         function fetchAndDisplayText() {
             console.log('Attempting to fetch text.txt...');
             fetch('text.txt')
@@ -47,44 +40,42 @@
                 });
         }
 
-        // Call the function to fetch and display text when the page loads
-        window.onload = fetchAndDisplayText;
+        window.onload = function() {
+            loadNavbar();
+            fetchAndDisplayText();
+        };
     </script>
+    <!-- Internal styles -->
+</head>
+
+<body>
+    <div id="NavBar"></div>
+    <div class="header">
+        <div class="spacer layer1"></div>
+        <img src="../../title.png" alt="Title Image" class="title" width="40%" height="auto">
+        <div id="emitter-container"></div>
+    </div>
+
+    <div class="mainBody">
+        <div id="textContainer" class="blogText"></div>
+    </div>
+
     <script src="../../scripts.js"></script>
 </body>
-&nbsp
-&nbsp
-&nbsp
-&nbsp
-&nbsp
-&nbsp
-&nbsp
-&nbsp
 
-<div class = "footer">
+<div class="footer">
     <section>
         <p>
             Thanks for visiting fennecs.dev <br>
-            <a href = "../../index.html">Return Home</a>
+            <a href="../../index.html">Return Home</a>
             <br>
-            <a href ="https://mastodon.gamedev.place/@PGtheVRguy">Follow me on Mastodon</a>
+            <a href="https://mastodon.gamedev.place/@PGtheVRguy">Follow me on Mastodon</a>
             <br>
-            <a href ="https://www.youtube.com/channel/UCwW2I9lbUbqT9u-d7B2GOew/">Follow me on YouTube</a>
+            <a href="https://www.youtube.com/channel/UCwW2I9lbUbqT9u-d7B2GOew/">Follow me on YouTube</a>
             <br>
             This site is still under construction, expect to see more projects soon!
         </p>
-
-
     </section>
-    &nbsp
-    &nbsp
-    &nbsp
-    &nbsp
-    &nbsp
-    &nbsp
-    &nbsp
-    &nbsp
 </div>
-
 
 </html>
