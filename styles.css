@@ -1,0 +1,216 @@
+/* Place your CSS styles in this file */
+
+/* Global styles */
+
+
+@font-face {
+  font-family: font_freeman;
+  src: url(fonts/Freeman-Regular.ttf);
+}
+
+body {
+  background: #240a45; /*240a45 */
+  color: #FFFFFF;
+  margin: 0;
+  padding: 0;
+  font-family: font_freeman;
+  text-shadow: 2px 2px 2px black;
+  margin-bottom: 0px;
+  border-bottom: 0px;
+  padding-bottom: 0px;
+}
+
+.mainBody {
+  background: linear-gradient(#471d7f, 50%, #240a45);
+  margin-bottom: 0px;
+}
+
+h1 {
+  text-align: center;
+  font-family: "Arial", Arial;
+  font-weight: normal;
+}
+
+.box {
+  margin: 20px;
+  padding: 10px;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+  position: relative;
+  z-index: 4; /* Lower z-index for the rest of the content */
+}
+
+/* Header styles */
+.header {
+  background: #001220 ; /*001220 */
+  position: relative;
+  width: 100%;
+  height: 450px; /* Adjust height as necessary */
+  background-color: #001220;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 0; /* Lower z-index than particles */
+  overflow: hidden; /* Ensures particles don't overflow from header */
+  
+}
+
+/* Particle emitter styles */
+#emitter-container {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none; /* Prevent particles from interfering with user interactions */
+  z-index: -1; /* Lower z-index than waves.svg */
+}
+
+.particle {
+  position: absolute;
+  bottom: 0px; /* Adjust this value based on particle size */
+  opacity: 1;
+  will-change: transform, opacity;
+  width: 64px;
+  height: 64px;
+  z-index: 0; /* Lower z-index to be below waves.svg */
+  background-color: #FFFFFF; /* Adjust particle color as needed */
+  border-radius: 50%; /* Make particles circular */
+  animation: particleAnimation 3s linear infinite; /* Example animation */
+}
+/* Rectangle styles */
+#rectangle {
+  width: 200px;
+  height: 100px;
+  background: blue;
+  padding: 100px;
+}
+
+
+.zoom {
+  position: relative;
+  display: inline-block;
+  padding: 50px;
+  transition: transform 0.2s, box-shadow 0.2s; /* Animation */
+  margin: 0 auto;
+  box-shadow: 0 0 0px rgba(0, 0, 0, 0.5);
+  overflow: hidden; /* Ensure the glint effect doesn't overflow */
+  border-radius: 20%;
+}
+
+
+.zoom:hover {
+  transform: rotateX(var(--rotateX)) rotateY(var(--rotateY)) scale(1.25);
+}
+
+.link-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px; /* Adjust the spacing between images */
+  margin: 20px 0; /* Adjust the margin as needed */
+}
+
+.link img {
+  display: block;
+  max-width: 100%; /* Ensure images scale correctly */
+}
+
+
+
+
+
+.footer{
+  position: relative;
+  bottom: 0;
+  left: 0;
+  text-align: center;
+  z-index: 70;
+  background: linear-gradient(#240a45, #150326);
+  margin-top: 0px;
+  border-top: 0px;
+  padding-top: 0px
+}
+
+
+
+
+
+
+.spacer {
+  position: absolute;
+  aspect-ratio: 900/450;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  z-index: 0;
+}
+
+.layer1 {
+  position: absolute;
+  background-image: url('waves.svg');
+  z-index: 1; /* Keep the waves.svg on top */
+}
+
+
+.title {
+  z-index: 69;
+  animation: fadeIn 2s;
+  -webkit-animation: fadeIn 2s;
+  -moz-animation: fadeIn 2s;
+  -o-animation: fadeIn 2s;
+  -ms-animation: fadeIn 2s;
+  display: inline-block;
+}
+
+
+ul li {
+  text-align: center;
+  list-style-type: none;
+  font-size: xx-large;
+}
+
+
+
+@keyframes fadeIn {
+  0% { opacity: 0; transform: translateY(100%);}
+  100% { opacity: 1; transform: translateY(0%);}
+}
+
+@-moz-keyframes fadeIn {
+  0% { opacity: 0; transform: translateY(100%);}
+  100% { opacity: 1; transform: translateY(0%);}
+}
+
+@-webkit-keyframes fadeIn {
+  0% { opacity: 0; transform: translateY(100%);}
+  100% { opacity: 1; transform: translateY(0%);}
+}
+
+@-o-keyframes fadeIn {
+  0% { opacity: 0; transform: translateY(100%);}
+  100% { opacity: 1; transform: translateY(0%);}
+}
+
+@-ms-keyframes fadeIn {
+  0% { opacity: 0; transform: translateY(100%);}
+  100% { opacity: 1; transform: translateY(0%);}
+}
+
+
+
+.blogTitle {
+  text-align: center;
+  font-size: xx-large
+}
+
+.blogText {
+  font-size: large;
+  font-family: font_freeman;
+  padding-left: 100px;
+  padding-right: 100px;
+  white-space: pre-wrap;
+}
+
+.blogText img{
+  max-width: calc(100% - 200px);
+}
