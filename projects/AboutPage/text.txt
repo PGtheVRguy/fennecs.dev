@@ -1,0 +1,23 @@
+Hey there, I'm Noah Sapelak!
+
+I'm currently a student dual enrolled at Holly High School and Oakland Schools Technical Campus NorthWest!
+
+I have knowledge in several programming languages, software, hardware, and CAD design! So far I've
+- Developed several programs in Python for Windows and Raspberry Pi  
+
+- Created various games using GameMaker Studio 2
+
+- Developed programs in C++ for Arduino
+
+- Programmed robots for FRC Robotics team HollyWood Robotics
+
+- Working on a long term Pip-Boy inspired smart watch
+
+- Designed several mods in OnShape
+
+- Made this website!
+
+For further information, please look at the links to my social medias and other platforms!
+
+
+Here are several pictures of all the projects I've done!

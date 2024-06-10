@@ -97,6 +97,7 @@ h1 {
   box-shadow: 0 0 0px rgba(0, 0, 0, 0.5);
   overflow: hidden; /* Ensure the glint effect doesn't overflow */
   border-radius: 20%;
+  width: auto;
 }
 
 
@@ -108,12 +109,21 @@ h1 {
   display: flex;
   justify-content: center;
   gap: 20px; /* Adjust the spacing between images */
-  margin: 20px 0; /* Adjust the margin as needed */
+  /*margin: 20px 0; /* Adjust the margin as needed */
+  left: 20px;
+  right: 20px;
+  width: auto;
+  height:auto;
+
 }
 
 .link img {
   display: block;
   max-width: 100%; /* Ensure images scale correctly */
+  left: 20px;
+  right: 20px;
+  width: auto;
+  height:auto;
 }
 
 

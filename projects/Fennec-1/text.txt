@@ -14,3 +14,22 @@ The entire device is designed around one central hub program/menu that allows on
 <img src="img3.jpg", alt = "A prototype mockup where I taped several parts to the 3D printed case of the Fennec-1", width = 25%, height = auto> 
 <img src="img4.jpg", alt = "A mess of cables, buttons, and a display which showcases the prototype guts of the Fennec-1", width = 25%, height = auto>
 Now the project as of 5/29/24 is not complete, currently Opal (one of my friends) and I just cut out the circuit board on copper, and soon I will solder the buttons and cables to it off a breadboard. The next challenges is finding a portable battery small enough to fit in the device. 
+
+6/10/24
+
+I believed I was nearly done with the project. I replaced the RPI3 with an RPI0W which is much smaller but easy to integrate my code over. Then, I reprinted my case to hold some Cherry MX Blue keyboard keys, soldered them together and... the cables I use dont like sticking to the keyboard keys
+<img src="keys.jpg" alt = "Picture of a CherryMX key with solder all over it, but no cable :", width = 25%, height = auto>
+
+Additionally, the switch from the Pi 3 to Pi Zero didnt fix the cable issue (wow who'd guess that)! And then to stack ontop of the disasters, school ended! I'm dual enrolled into the OSTC-NW campus, and so I can utilize many of the tools apart of the mechatronics class, which is how I'm able to solder and manufactur my circuit boards for this. 
+
+So, here's my new plan. Later this week I plan to head to Microcenter, buy a soldering iron, Pi Zero 2 (boot times are really bad on the Zero 1), and one of those handy prototype circuit board things, as most of the space issues come from my poor cable management. 
+
+<img src="spaghetti.jpg" alt = "A picture of the Fennec-1 with cables extruding from its back ", width = 25%, height = auto>
+
+After that, I can finally tackle the main issue, powering the damn thing on the go! (and strapping it to my arm)
+
+
+
+In the meantime I'll be reworking this website so I can actually turn this large post into several blogs! Look 'ma, I can blog now! 
+
+
