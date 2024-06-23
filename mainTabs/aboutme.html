@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>fennecs.dev</title>
+    
+    <!-- Load external CSS styles -->
+    <link rel="stylesheet" href="/styles.css">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <script>
+        function loadNavbar() {
+            fetch('/navbar.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('NavBar').innerHTML = data;
+                })
+                .catch(error => console.error('Error loading navbar:', error));
+        }
+    
+        window.onload = loadNavbar;
+    </script>
+    <!-- Internal styles -->
+</head>
+<!-- #001220 -->
+
+<div id="NavBar"></div>
+
+
+
+<div class="header">
+    
+    <div class = "spacer layer1"></div>
+
+    <img src="/title.png" alt="Title Image" class = "title", width = 40%, height = auto>
+    
+    <div id="emitter-container"></div>
+    
+</div>
+
+
+<div class = "mainBody">
+    &nbsp
+    <body>
+        
+        <!--<img src="face.png" alt="Face Image">-->
+
+        <div class="box">
+            <img src="face.jpg" width="64", height="auto">
+            Hey there, I'm Noah Sapelak! Currently I attend Holly High School/Oakland Schools Technical Campus Northwest, all while entering my senior year! I spend my time at school taking AP classes, and helping out the schools robotics team, Hollywood Robotics (7211)! When I'm not doing that, I like to play on my computer and work on projects!
+        </div>
+        <br><br><br>
+        <div class="box">
+            I have plenty of experience in several tools!<br> 
+             -6 years using GameMaker: Studio 2<br>
+             -Using Java to program FRC Robots <br>
+             -Programming in Python and C++ to program with microcontrollers<br>
+             -Using Blender, OnShape, and Solidworks to craft 3D models<br>
+             -Slice models to print on 3D printers (Prusa, Creality, Anycubic, Bambu, etc.) <br>
+             -Edit videos in Davinci Resolve <br>
+            <!--<img src="face.jpg" width="64", height="auto">-->
+            
+        </div>
+        <br><br><br>
+        <div class="box">
+
+            <img src="aboutmeimg/gf.png" width="512", height="auto">
+            <img src="aboutmeimg/leds.gif" width="256", height="auto">
+            <img src="aboutmeimg/mefanuc.jpg" width="200", height="auto">
+            <img src="aboutmeimg/tbaled.png" width="200", height="auto">
+            <img src="aboutmeimg/vrchat.png" width="256", height="auto">
+            
+        </div>
+        <!-- Load external JavaScript -->
+        <!-- Load external JavaScript -->
+        <script src="/scripts.js"></script>
+    </body>
+    
+    &nbsp
+    &nbsp
+    &nbsp
+</div>
+
+<div class = "footer">
+    <section>
+        <p>
+            Thanks for visiting fennecs.dev <br>
+            <a href ="https://mastodon.gamedev.place/@PGtheVRguy">Follow me on Mastodon</a>
+            <br>
+            <a href ="https://www.youtube.com/channel/UCwW2I9lbUbqT9u-d7B2GOew/">Follow me on YouTube</a>
+            <br>
+            This site is still under construction, expect to see more projects soon!
+        </p>
+
+
+    </section>
+    &nbsp
+    <a rel="me" href="https://mastodon.gamedev.place/@PGtheVRguy"></a>
+
+</div>
+
+
+</html>

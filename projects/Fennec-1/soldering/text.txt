@@ -1,0 +1,7 @@
+
+With the new move towards summer, I can no longer utilize the tools at OSTC (until school starts again). So recently I went to Microcenter and picked up a cheap soldering iron!
+
+<img src="soldering.jpg" alt = "My botched and cheap soldering station", width = 50%, height = auto>
+
+Currently, the soldering station isnt much! I've connected some old computer fans to an Arduino Uno to try and push away all the toxic air away directly from my face (although it then gets shot into the wall, dont worry I keep my window open!), and a cheap binder to protect my table from the solder! Its not the best method but it'll work for just getting this watch working lol! 
+

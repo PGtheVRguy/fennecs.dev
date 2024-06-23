@@ -2,7 +2,7 @@
 
 document.addEventListener('DOMContentLoaded', function() {
     const container = document.getElementById('emitter-container');
-
+    //npx http-server  to run the site
     // Function to create a particle
     function createParticle() {
         const particle = document.createElement('img');

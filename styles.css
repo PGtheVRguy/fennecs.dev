@@ -37,6 +37,16 @@ h1 {
   border-radius: 10px;
   position: relative;
   z-index: 4; /* Lower z-index for the rest of the content */
+  font-size: large;
+}
+
+.box img{
+  margin: 20px;
+  padding: 10px;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+  position: relative;
+  z-index: 4; /* Lower z-index for the rest of the content */
 }
 
 /* Header styles */
@@ -219,8 +229,8 @@ ul li {
 .blogText {
   font-size: large;
   font-family: font_freeman;
-  padding-left: 100px;
-  padding-right: 100px;
+  padding-left: 300px;
+  padding-right: 300px;
   white-space: pre-wrap;
 }
 
@@ -229,6 +239,14 @@ ul li {
   margin-left: auto;
   margin-right: auto;
   display: block;
+}
+.blogButton {
+  font-size: xx-large;
+  text-align: center;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  
 }
 
 

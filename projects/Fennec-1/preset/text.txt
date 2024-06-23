@@ -1,0 +1,16 @@
+The Fennec-1 is a Raspberry Pi 3 handheld device programmed entirely in Python. This project is inspired of Sci-Fi handhelds like Fallouts "Pip-Boy" and creator Zach Freedmans "Singularitron". 
+
+<img src="img1.jpg" alt = "Image of an oled display running off a rpi3 displaying Spotify song data", width = 100%>
+
+The entire device is designed around one central hub program/menu that allows one to easily program more apps for the device with the menu dynamically adding them onto the user interface. This project was a great learning experience as it allowed me to get a better grasp at how to have multiple Python projects interact with eachother, adding IO to the Raspberry Pi, and have a fully physical and practical project complete. All the things I've learned with this project are as followed.
+
+- Better utilization of larger Python projects
+- How to design a circuit board
+- Using OnShape to design a case
+- Wiring and interfacing with IO on the GPIO ports of the Pi
+
+
+<img src="img2.png" alt = "Screenshot of the Fennec-1 case created in OnShape", width = 50%, height = auto>
+<img src="img3.jpg", alt = "A prototype mockup where I taped several parts to the 3D printed case of the Fennec-1", width = 25%, height = auto> 
+<img src="img4.jpg", alt = "A mess of cables, buttons, and a display which showcases the prototype guts of the Fennec-1", width = 25%, height = auto>
+
