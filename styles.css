@@ -124,9 +124,17 @@ h1 {
   right: 20px;
   width: auto;
   height:auto;
-
+  color:aquamarine;
 }
-
+a:link {
+  color: aquamarine;
+}
+a:hover {
+  color: rgb(39, 31, 83);
+}
+a:visited {
+  color: aquamarine;
+}
 .link img {
   display: block;
   max-width: 100%; /* Ensure images scale correctly */
@@ -246,9 +254,11 @@ ul li {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  
+  color: rgb(255, 200, 252);
 }
-
+.blogButton:hover {
+  color: rgb(139, 66, 146);
+}
 
 #NavBar {
   background-color: #001220;

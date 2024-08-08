@@ -1,0 +1,41 @@
+The "uwuBank" system is a banking system for Create/ComputerCraft, without any commands or cheats.
+
+
+<iframe src="https://youtu.be/ctMfQ3faWr8"></iframe>
+
+
+The uwuBank system allows for putting diamonds into / out of an account, and using a seperate cashier system for automated shopping!
+
+This REQUIRES CC:Tweaked and Create and is made for release 1.20.1, however it may work for earlier/later versions
+
+--HOW TO SETUP--
+
+
+Step 1. The Banking Server:
+
+The system is dependent on the server to ensure a secure connection! Simply place a computer and an endermodem, then install the server software with the following command
+pastebin get gDqtPCMm
+
+then restart the computer! Please only leave ONE of these servers up, the entire serverside software is mostly automated!
+
+
+Step 2. Access Portal
+
+For users to actually interact with the bank, create cards, and deposit/withdraw diamonds, they need an "Access Portal"! These are the most complex part of the banking system.
+
+Now luckily this is built with Create, so we can use schematics!
+
+SCHEMATIC DOWNLOAD
+
+Please note there are some things you need to ensure with the wireless redstone.
+On the bottom face of the primary computer, there is a redstone link that needs to be connected to the dropper link
+On the left face of the primary computer, there is a redstone link that needs to be connected to the brass funnel redstone link
+On the top face of the primary computer, there is a redstone link that needs to be connected to the white wool redstone link
+
+It is IMPORTANT that these are only connected to their specific counterparts and NOT eachother. You may loose Diamonds if wrongfully setup.
+
+The Access Portal has two main computers. The "primary" computer that is accessible to users, and a "secondary" computer that is hidden and only controls the top display.
+
+Also, you will need a floppy disk to download and move the setup software. 
+
+pastebin get Fbn0xNSY
