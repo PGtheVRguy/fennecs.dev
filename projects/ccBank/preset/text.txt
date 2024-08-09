@@ -1,8 +1,9 @@
 The "uwuBank" system is a banking system for Create/ComputerCraft, without any commands or cheats.
 
 
-<iframe src="https://youtu.be/ctMfQ3faWr8"></iframe>
+<p align="center"><iframe width="480" height="270" src="https://youtube.com/embed/ctMfQ3faWr8"></iframe></p>
 
+<img src="1.png" alt = "Image of the Access Portal", width = 50%, height = auto>
 
 The uwuBank system allows for putting diamonds into / out of an account, and using a seperate cashier system for automated shopping!
 
@@ -11,7 +12,7 @@ This REQUIRES CC:Tweaked and Create and is made for release 1.20.1, however it m
 --HOW TO SETUP--
 
 
-Step 1. The Banking Server:
+<li>BANKING SERVER</li>
 
 The system is dependent on the server to ensure a secure connection! Simply place a computer and an endermodem, then install the server software with the following command
 pastebin get gDqtPCMm
@@ -19,13 +20,15 @@ pastebin get gDqtPCMm
 then restart the computer! Please only leave ONE of these servers up, the entire serverside software is mostly automated!
 
 
-Step 2. Access Portal
+<li>ACCESS PORTALS</li>
 
 For users to actually interact with the bank, create cards, and deposit/withdraw diamonds, they need an "Access Portal"! These are the most complex part of the banking system.
 
 Now luckily this is built with Create, so we can use schematics!
 
-SCHEMATIC DOWNLOAD
+<a href = "accessportal2.nbt" download>Download Create Schematic </a>
+
+<img src="3.png" alt = "Image of the Access Portals insides", width = 50%, height = auto>
 
 Please note there are some things you need to ensure with the wireless redstone.
 On the bottom face of the primary computer, there is a redstone link that needs to be connected to the dropper link
@@ -38,4 +41,54 @@ The Access Portal has two main computers. The "primary" computer that is accessi
 
 Also, you will need a floppy disk to download and move the setup software. 
 
+
+Ensure you have a floppy disk plugged in, and install the tar.lua from this repo
+<a href="https://github.com/MCJack123/CC-Archive/tree/master">CC Compression GitHub</a>
+
+Install the software using 
 pastebin get Fbn0xNSY
+then run "tar -xf file.tar", they should all go onto your floppy disk!
+
+Afterwards, run the "bankInstaller.lua", once done eject the floppy disk and restart the computer.
+
+Restart the machine, and hold "CTRL+T" to terminate the program. Create a file called "id", and give it a number ID that is unique to the machine. Access Portals and Cashiers both run on the same ID system so ENSURE this is UNIQUE from EVERYTHING!!
+
+Move up to the display computer, place a disk drive next to it, and put the floppy disk in!
+Run "displayInstaller.lua"
+
+Now you're done!
+
+
+
+<li>CASHIER</li>
+
+<img src="2.png" alt = "Image of the Access Portal", width = 50%, height = auto>
+
+NOTICE!! There is a MAJOR vulnerability within this release of the Cashier. Currently, both the ID we are paying to and the money required to spend is in two seperate VERY OPEN files. I greatly apologize and plan to fix this in the future!
+
+To install the Cashier program, simply place down the schematic, and install this program
+
+<a href = "cashier.nbt" download>Download Create Schematic </a>
+
+pastebin get CnRXAVqB
+
+Afterwards, setup a file called "sender", you give this the floppydisk ID (you can see it flash up on the Access Portal when a floppy disk is first inserted) of whoever is recieving the money.
+Then, you make a file called "paying", here you put ONLY the price (in Diamonds) of the item!
+Finally, you make a file called "id", just like the Access Portal, you want to ensure this ID is unique from all other Cashiers AND Access Portals.
+
+All values in those files NEED to be numbers.
+
+Now you are done! If you have any issues feel free to modify anything you'd need! I believe there are ways to prevent manual terminations from programs for the cashier, but I rather find a proper fix later!
+
+Thanks for checking it out!
+
+
+Heres the mods/texturepacks used:
+
+
+
+<a href="https://www.curseforge.com/minecraft/texture-packs/computercreate">ComputerCreate Texturepack</a> 
+<a href="https://modrinth.com/mod/cc-tweaked">ComputerCraft</a> 
+<a href="https://modrinth.com/mod/create">Create</a> 
+
+I'll likely update this installation "Guide" on if there are changes with 1.21!
