@@ -233,12 +233,12 @@ ul li {
   text-align: center;
   font-size: xx-large
 }
-
+/* 300px */
 .blogText {
-  font-size: large;
+  font-size: auto;
   font-family: font_freeman;
-  padding-left: 300px;
-  padding-right: 300px;
+  padding-left: 20%; 
+  padding-right: 20%;
   white-space: pre-wrap;
 }
 
