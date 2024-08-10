@@ -1,7 +1,10 @@
 The "uwuBank" system is a banking system for Create/ComputerCraft, without any commands or cheats.
 
 
-<p align="center"><iframe width="480" height="270" src="https://youtube.com/embed/ctMfQ3faWr8"></iframe></p>
+<div class="video-container">
+  <iframe width="1080" height="608" src="https://youtube.com/embed/ctMfQ3faWr8" allowfullscreen></iframe>
+</div>
+
 
 <img src="1.png" alt = "Image of the Access Portal", width = 50%, height = auto>
 
