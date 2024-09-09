@@ -9,7 +9,7 @@
 }
 
 body {
-  background: #240a45; /*240a45 */
+  background:  #001220;/*#240a45; /*240a45 */
   color: #FFFFFF;
   margin: 0;
   padding: 0;
@@ -298,14 +298,19 @@ width = 50%,
   background-color: #001220;
   overflow: hidden;
   z-index: 420;
+  border-radius: 0% 0% 98% 75%;
 }
 #NavBar a {
   color: white;
+  text-shadow: none;
   text-align: center;
-  padding: 15px;
+  padding: 40px;
   float: left;
   display: block;
   z-index: 420;
+  padding-left:40px;
+  padding-top: 20px;
+  padding-bottom: -20px;
 }
 .sticky {
   position: fixed;

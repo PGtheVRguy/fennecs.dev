@@ -4,6 +4,8 @@ document.addEventListener('DOMContentLoaded', function() {
     const container = document.getElementById('emitter-container');
     //npx http-server  to run the site
     // Function to create a particle
+    //I should replace these with pixelart foxes flying through space (it'd be cool)
+    //or cache the foxes, this could cause heavy lag
     function createParticle() {
         const particle = document.createElement('img');
         particle.angle = 0;
@@ -11,7 +13,7 @@ document.addEventListener('DOMContentLoaded', function() {
         particle.classList.add('particle');
 
         // Fetch a random fox image URL
-        fetch('https://randomfox.ca/floof/')
+        /*fetch('https://randomfox.ca/floof/')
             .then(response => response.json())
             .then(data => {
                 particle.src = data.image; // Set particle.src to the fetched image URL
@@ -34,7 +36,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
                 // Animate the particle
                 animateParticle(particle);
-            });
+            });*/
     }
 
     // Function to animate the particle
