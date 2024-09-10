@@ -120,11 +120,15 @@ h1 {
   justify-content: center;
   gap: 20px; /* Adjust the spacing between images */
   /*margin: 20px 0; /* Adjust the margin as needed */
-  left: 20px;
-  right: 20px;
+  /*left: 20px;
+  right: 20px;*/
+  margin-left: 20px;
+  margin-right: 20px;
   width: auto;
   height:auto;
   color:aquamarine;
+  flex-wrap: wrap;
+  
 }
 a:link {
   color: aquamarine;
@@ -138,10 +142,12 @@ a:visited {
 .link img {
   display: block;
   max-width: 100%; /* Ensure images scale correctly */
-  left: 20px;
-  right: 20px;
+  margin-left: 20px;
+  margin-right: 20px;
   width: auto;
   height:auto;
+  padding: 0;
+  
 }
 
 
