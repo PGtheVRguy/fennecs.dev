@@ -329,3 +329,12 @@ width = 50%,
   height: inherit;
   padding: auto;
 }
+
+.contact{
+  font-size: xx-large;
+  text-align: center;
+}
+.contactsmol{
+  font-size: large;
+  text-align: center;
+}
