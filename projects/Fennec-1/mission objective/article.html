@@ -17,6 +17,13 @@
                     document.getElementById('NavBar').innerHTML = data;
                 })
                 .catch(error => console.error('Error loading navbar:', error));
+            fetch('/footer.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('Footer').innerHTML = data;
+                })
+                .catch(error => console.error('Error loading footer:', error));
+
         }
 
         function fetchAndDisplayText() {
@@ -68,19 +75,5 @@
 
 </body>
 
-<div class="footer">
-    <section>
-        <p>
-            Thanks for visiting fennecs.dev <br>
-            <a href="/index.html">Return Home</a>
-            <br>
-            <!--<a href="https://mastodon.gamedev.place/@PGtheVRguy">Follow me on Mastodon</a>
-            <br>-->
-            <a href="https://www.youtube.com/channel/UCwW2I9lbUbqT9u-d7B2GOew/">Follow me on YouTube</a>
-            <br>
-            This site is still under construction, expect to see more projects soon!
-        </p>
-    </section>
-</div>
-
+<div id="Footer"></div>
 </html>

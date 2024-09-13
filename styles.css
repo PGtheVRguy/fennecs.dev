@@ -324,3 +324,8 @@ width = 50%,
   width: 100%;
   z-index: 420;
 }
+
+.aboutMe img {
+  height: inherit;
+  padding: auto;
+}

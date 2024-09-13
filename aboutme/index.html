@@ -18,6 +18,13 @@
                     document.getElementById('NavBar').innerHTML = data;
                 })
                 .catch(error => console.error('Error loading navbar:', error));
+            fetch('/footer.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('Footer').innerHTML = data;
+                })
+                .catch(error => console.error('Error loading footer:', error));
+
         }
     
         window.onload = loadNavbar;
@@ -65,11 +72,13 @@
         </div>
         <br><br><br>
         <div class="box">
-            <img src="aboutmeimg/gf.png" width="512", height="auto">
-            <img src="aboutmeimg/leds.gif" width="256", height="auto">
-            <img src="aboutmeimg/mefanuc.jpg" width="200", height="auto">
-            <img src="aboutmeimg/tbaled.png" width="200", height="auto">
-            <img src="aboutmeimg/vrchat.png" width="256", height="auto">
+            <div class="aboutMe">
+                <img src="aboutmeimg/gf.png", width="512px">
+                <img src="aboutmeimg/leds.gif", width="256px">
+                <img src="aboutmeimg/mefanuc.jpg", width="200px">
+                <img src="aboutmeimg/tbaled.png", width="200px">
+                <img src="aboutmeimg/vrchat.png", width="256px">
+            </div>
         </div>
         <!-- Load external JavaScript -->
         <!-- Load external JavaScript -->
@@ -81,23 +90,7 @@
     &nbsp
 </div>
 
-<div class = "footer">
-    <section>
-        <p>
-            Thanks for visiting fennecs.dev <br>
-            <a href ="https://mastodon.gamedev.place/@PGtheVRguy">Follow me on Mastodon</a>
-            <br>
-            <a href ="https://www.youtube.com/channel/UCwW2I9lbUbqT9u-d7B2GOew/">Follow me on YouTube</a>
-            <br>
-            This site is still under construction, expect to see more projects soon!
-        </p>
-
-
-    </section>
-    &nbsp
-    <a rel="me" href="https://mastodon.gamedev.place/@PGtheVRguy"></a>
-
-</div>
+<div id="Footer"></div>
 
 
 </html>
