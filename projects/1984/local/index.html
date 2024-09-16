@@ -23,7 +23,7 @@
         <!-- Set the background colour of the document -->
         <style>
             body {
-                background: #0;
+                background: #471d7f;
                 color: #cccccc;
                 margin: 0px;
                 padding: 0px;
@@ -72,26 +72,19 @@
             div.gm4html5_login_header {
                 text-align: center;
             }
+            a:link {
+            color: aquamarine;
+            }
+            a:hover {
+            color: rgb(39, 31, 83);
+            }
+            a:visited {
+            color: aquamarine;
+            }
             /* END - Custom Runner Styles */
             
         </style>
-        <script>
-            function loadNavbar() {
-                fetch('/navbar.html')
-                    .then(response => response.text())
-                    .then(data => {
-                        document.getElementById('NavBar').innerHTML = data;
-                    })
-                    .catch(error => console.error('Error loading navbar:', error));
-                fetch('/footer.html')
-                    .then(response => response.text())
-                    .then(data => {
-                        document.getElementById('Footer').innerHTML = data;
-                    })
-                    .catch(error => console.error('Error loading footer:', error));
-    
-            }
-        </script>
+        
         <!-- Custom PostStyle code is injected here -->
         
 
@@ -106,6 +99,8 @@
     
 
     <body>
+        <div id="NavBar"></div>
+        fennecs.dev    
         <div class="gm4html5_div_class" id="gm4html5_div_id">
             
             <!-- Builtin injector for splash screen -->
@@ -126,10 +121,26 @@
         <script>window.onload = GameMaker_Init;</script>
 
         <!-- Builtin injector for injecting google analytics code -->
+        <br>1984
+        <br>Developed by fennecsdev, made in GameMaker
+        <br>
+        <br><a href="/index.html">>>Home</a>
+        <br><a href="/projects/1984">>>About Game</a>
+        <br><a href="https://github.com/PGtheVRguy/1984">>>Source Code</a>
+        <br><br><br>
+        <br>--CONTROLS--
+        <br>Enter=Accept
+        <br>Arrow/WASD=Move
+        <br>
+        <br>
+        <br>PLEASE DONT REDISTRIBUTE
+        <br>I WILL CRY IF YOU DO
+        <br>
+        <br>(But if you do, pay me??)
+        <br>((at <a href="mailto:noah@fennecs.dev">noah@fennecs.dev</a>))
         
-
     </body>
 
     <!-- Custom PostBody code is injected here -->
-    
+    <div id="Footer"></div>
 </html>
