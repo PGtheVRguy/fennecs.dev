@@ -24,12 +24,25 @@
         <style>
             body {
                 /*background: #471d7f;*/
-                background-image: url("/pictures/gamebg.png");
+                background: url("/pictures/gamebg.png") repeat;
                 color: #cccccc;
                 margin: 0px;
                 padding: 0px;
                 border: 0px;
+                -webkit-animation: scrolling 5s linear infinite;
+                -moz-animation: scrolling 5s linear infinite;
+                -o-animation: scrolling 5s linear infinite;
+                animation: scrolling 5s linear infinite;
             }
+            @keyframes scrolling {
+            from{
+                background-position: 0 0;
+            }
+            to{
+                background-position: 0 195%;
+            }
+            }
+
 
             canvas {
                 image-rendering: optimizeSpeed;
