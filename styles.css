@@ -338,3 +338,14 @@ width = 50%,
   font-size: large;
   text-align: center;
 }
+
+code {
+  background-color: #64506b;
+  border: 1px solid #5b5b5b;
+  color: #FFFFFF;
+  display: block;
+  padding: 20px;
+  text-shadow: none;
+  font-family: code;
+  border-radius: 10px;
+}
