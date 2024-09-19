@@ -349,3 +349,16 @@ code {
   font-family: code;
   border-radius: 10px;
 }
+
+.errorPage {
+  background:  #001220;/*#240a45; /*240a45 */
+  color: #FFFFFF;
+  margin: 0;
+  padding: 0;
+  font-family: font_freeman;
+  text-shadow: 2px 2px 2px black;
+  text-align: center;
+}
+.errorSmol {
+  font-size:x-small;
+}
