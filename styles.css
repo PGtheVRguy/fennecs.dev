@@ -359,6 +359,21 @@ code {
   text-shadow: 2px 2px 2px black;
   text-align: center;
 }
+
+
+.errorPage img{
+  
+  
+  width: 50%;
+  height: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  /*display: inline;
+  position: absolute;
+
+  padding: 0;*/
+}
+
 .errorSmol {
-  font-size:x-small;
+  font-size: x-small;
 }
