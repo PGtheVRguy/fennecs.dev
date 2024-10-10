@@ -1,0 +1,9 @@
+Woohoo! New update! :partying_face:
+**UPDATE 0.2**
+This update
+-Fixes several bugs
+-Added new roles to show parkour level
+-Better balancing for one block vertical jumps
+--Increased change from 20% to 25% + failedTimes*3
+
+Enjoy the new Parkour Update and try to up the ranks!
