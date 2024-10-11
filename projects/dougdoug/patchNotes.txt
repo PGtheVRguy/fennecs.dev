@@ -1,9 +1,11 @@
 Woohoo! New update! :partying_face:
-**UPDATE 0.2**
+**UPDATE 0.3**
 This update
--Fixes several bugs
--Added new roles to show parkour level
--Better balancing for one block vertical jumps
---Increased change from 20% to 25% + failedTimes*3
+-Fixes several bugs (chat I may have forgotten one line that crashed the bot on the pi)
+-Cool new emojis
+-Proper setup for main bot channel for update notices!!!!
+-Added cool ass gifs
+-idk im tired and just want to test the patch system
 
 Enjoy the new Parkour Update and try to up the ranks!
+For more information, come [check the website](https://fennecs.dev/projects/dougdoug)!
