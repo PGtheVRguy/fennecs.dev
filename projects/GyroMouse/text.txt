@@ -1,0 +1,8 @@
+The following cautionary tale I am about to tell you is not one of successes, but of utter failures. One of a project that took two months to build, two redesigns, and an angery thrust of the object into my locker for light to never touch upon the tomb of parts again.
+
+This projects tale starts in late September. I was looking for a cool project idea that I thought could be practical,
+but interesting. My idea was simple, what if I designed a glove with a gyroscope on it so that I can move my mouse with
+the flick of my hand, akin to a VR Controller/wiimote! This idea struck me one night while I was in bed watching
+YouTube, but not wanting to get up and click for the next video. I ordered a gyroscope and within a week built my first
+working prototype. This is when disaster struck. As you can (currently) see with the Fennec-1, most of my projects fail
+to exit prototyping. However, this one I had a plan. Within the next two weeks I designed a small box 
