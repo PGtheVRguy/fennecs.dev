@@ -9,20 +9,68 @@
 		<p class="mainPageText">FREDERICK SECURITY TERMINAL</p>
 	</div>
 	<div class="mainWindow">
+		<ul id="list" style="list-style: none;"></ul>
+		<!--
 		<p>security>: LOG 01/05/15</p>
 		<p>security>: Website accessed by [IP BLOCKED]</p>
 		<p>security>: FRONT security gate deactivated</p>
 		<p>security>: Tape Vault opened</p>
         <p>security>: Failure to contact local security center...</p>
         <p>security>: Attention, local security has been engaged in local location [FREDERICKS LABOR LAND]. Deactivating log of [FREDERICKS LABOR LAND]</p>
-        <p>security>: Awaiting manual action...</p> 
+        <p>security>: Awaiting manual action...</p> -->
         <div id = "userMessages"></div>
 	</div>
 	<div class="userInput">
-		<form>
-			<input type="text" autocomplete="off" spellcheck="false" id="fname" name="fname" value ="User Input Here" onfocus="if(this.value==this.defaultValue)this.value=''" onblur="if(this.value=='')this.value=this.defaultValue">
-		</form>
+		<input 
+			type="text" 
+			autocomplete="off" 
+			spellcheck="false" 
+			id="fname" 
+			placeholder="User Input Here" 
+			onkeypress="handleKeyPress(event)">
 	</div>
+	
     <!-- I stole all this from https://stackoverflow.com/questions/61420424/creating-command-interface-styled-html-site -->
+	<script>
+	// Reference the list element
+	let data = ["LOG 01/05/15", "Website accessed by [IP BLOCKED]", "Awaiting further action..."];
+	let list = document.getElementById("list");
+	let recognizedTerms = ["help"]
+// Initialize list with predefined data
+	for (let i = 0; i < data.length; ++i) {
+		let li = document.createElement('li');
+		li.innerText = "security> " + data[i];
+		list.appendChild(li);
+	}
+
+// Function to handle user input when pressing Enter
+	function handleKeyPress(event) {
+		if (event.key === "Enter") {
+			event.preventDefault(); // Stop default Enter key behavior (form submission)
+
+			let commandInput = document.getElementById("fname"); // Get the input field
+			let command = commandInput.value.trim(); // Get the input value, removing extra spaces
+
+			if (command !== "") {
+				// Create a new list item and append it to the list
+				let li = document.createElement('li');
+				
+				if(!recognizedTerms.includes(command))
+				{
+				li.innerText = "security> " + command;
+				list.appendChild(li);
+				li.innerText = "Error, " + command + " is not a recognizable term."
+				list.appendChild(li);
+				}
+			}
+
+			commandInput.value = ""; // Clear the input field
+		}
+	}
+
+
+	</script>
+
+
 </body>
 </html>

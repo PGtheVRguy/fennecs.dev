@@ -12,7 +12,7 @@
     <link rel="icon" type="image/x-icon" href="/favicon.ico">
     <script>
         function loadNavbar() {
-            fetch('/navbar.html')
+            fetch('/subnavbar.html')
                 .then(response => response.text())
                 .then(data => {
                     document.getElementById('NavBar').innerHTML = data;
@@ -36,7 +36,7 @@
 <div id="NavBar"></div>
 
 
-
+<!--
 <div class="header">
     
     <div class = "spacer layer1"></div>
@@ -46,18 +46,25 @@
     <div id="emitter-container"></div>
     
 </div>
-
+-->
 
 <div class = "mainBody">
-    &nbsp
+    &nbsp<br><br><br><br>
     <body>
         
         <!--<img src="face.png" alt="Face Image">-->
 
-        <div class="box">
-            <img src="face.jpg" width="64", height="auto">
-            Hey there, I'm Noah Sapelak! Currently I attend Holly High School/Oakland Schools Technical Campus Northwest, all while entering my senior year! I spend my time at school taking AP classes, and helping out the schools robotics team, Hollywood Robotics (7211)! When I'm not doing that, I like to play on my computer and work on projects!
+        <div class="box" style="position: absolute;">
+            <div style="width: 10%; float: left">
+                <img src="face.jpg" width="64", height="auto">
+            </div>
+            <div style="width: 90%; float:right">
+                <br><br>
+                Hey there, I'm Noah Sapelak! Currently I attend Holly High School/Oakland Schools Technical Campus Northwest, all while entering my senior year! I spend my time at school taking AP classes, and helping out the schools robotics team, Hollywood Robotics (7211)! When I'm not doing that, I like to play on my computer and work on projects!
+            </div>
         </div>
+        <br><br><br>
+        <br><br><br>
         <br><br><br>
         <div class="box">
             I have plenty of experience in several tools!<br> 
