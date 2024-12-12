@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>fennecs.dev</title>
+    
+    <!-- Load external CSS styles -->
+    <link rel="stylesheet" href="/styles.css?version=20">
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <script>
+        function loadNavbar() {
+            fetch('/subnavbar.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('NavBar').innerHTML = data;
+                })
+                .catch(error => console.error('Error loading navbar:', error));
+            fetch('/footer.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('Footer').innerHTML = data;
+                })
+                .catch(error => console.error('Error loading footer:', error));
+
+        }
+        function loadArticles() {
+            fetch("./articles.json")
+                .then((response) => response.json())
+                .then(json => {
+                const TPL_Results = item => `
+                    <div class="Results-item">
+                        <a class="blog-list-title  " href=${item.url}>${item.name}</a>
+                        <div class="blog-description"><b>${item.summary}</b></div>
+                        <hr class = "blog-line">
+                    </div>`;
+                
+                document.querySelector("#results").innerHTML = json.map(item => TPL_Results(item)).join('');
+            })
+            .catch(error => console.error('Error loading articles:', error));
+        }
+        
+
+        function allTheShit() {
+            loadNavbar()
+            loadArticles()
+        }
+        window.onload = allTheShit; //I dont know Javascript so im just making shit up
+
+    </script>
+    <!-- Internal styles -->
+</head>
+<!-- #001220 -->
+
+<div id="NavBar"></div>
+<body>
+<div class = "mainBody">
+    <br><br><br><br><br>
+    <div class="Results" id="results"></div>
+
+    
+    <br><br><br><br><br><br><br><br><br><br><br><br><br<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    
+    <script src="/scripts.js"></script>
+    </body>
+</div>
+
+
+<div id="Footer"></div>
+<!--<div class = "footer">
+    <section>
+        <p>
+            Thanks for visiting fennecs.dev <br>
+            This website is maintained by PGtheVRguy/fennecsdev<br>
+            <a href ="https://mastodon.gamedev.place/@PGtheVRguy">Follow me on Mastodon</a>
+            <br>
+            <a href ="https://www.youtube.com/channel/UCwW2I9lbUbqT9u-d7B2GOew/">Follow me on YouTube</a>
+            <br>
+        </p>
+
+
+    </section>
+    &nbsp
+    <a rel="me" href="https://mastodon.gamedev.place/@PGtheVRguy"></a>
+
+</div> -->
+
+
+</html>

@@ -3,9 +3,22 @@
 /* Global styles */
 
 
+
+
+
 @font-face {
   font-family: font_freeman;
   src: url(fonts/Freeman-Regular.ttf);
+}
+@font-face {
+  font-family: font_IBM;
+  src: url(fonts/IBM.ttf);
+}
+
+
+
+:root {
+  --darkPurple: #240a45;
 }
 
 body {
@@ -18,7 +31,7 @@ body {
 }
 
 .mainBody {
-  background: linear-gradient(#471d7f, 50%, #240a45);
+  background: linear-gradient(#471d7f, 50%, var(--darkPurple));
   margin-bottom: 0px;
   margin: 0;
   padding: 0;
@@ -173,7 +186,7 @@ a:visited {
   left: 0;
   text-align: center;
   z-index: 70;
-  background: linear-gradient(#240a45, #150326);
+  background: linear-gradient(var(--darkPurple), #150326);
   margin-top: 0px;
   border-top: 0px;
   padding-top: 0px
@@ -321,6 +334,11 @@ width = 50%,
   overflow: hidden;
   z-index: 420;
   border-radius: 0% 0% 98% 75%;
+  position: fixed;
+  margin-right: 0%;
+  padding-right: 0%;
+  width: 100%;
+
 }
 #NavBar a {
   color: white;
@@ -392,4 +410,44 @@ code {
 
 .errorSmol {
   font-size: x-small;
+}
+
+/* BLOG */
+
+.blog-title {
+  font-size: xx-large;
+  font-family: font_IBM;
+  margin-left: 15%;
+  margin-right: 10%;
+}
+
+.blog-list-title {
+  font-size: large;
+  font-family: font_IBM;
+  margin-left: 15%;
+  margin-right: 10%;
+}
+
+.blog-description {
+  font-size: large;
+  font-family: font_IBM;
+  margin-left: 20%;
+  margin-right: 30%;
+}
+
+.blog-body {
+  font-size: large;
+  font-family: font_IBM;
+  margin-left: 20%;
+  margin-right: 20%;
+  margin-top: 30px;
+}
+
+hr.blog-line {  
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-left: 15%;
+  margin-right: 15%;
+  border: 3px solid var(--darkPurple);
+  border-radius: 10px;
 }

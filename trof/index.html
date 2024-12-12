@@ -32,10 +32,14 @@
 	
     <!-- I stole all this from https://stackoverflow.com/questions/61420424/creating-command-interface-styled-html-site -->
 	<script>
+
+
+	//import data from '/files.json'
+	//console.log(data);
 	// Reference the list element
 	let data = ["LOG 01/05/15", "Website accessed by [IP BLOCKED]", "Awaiting further action..."];
 	let list = document.getElementById("list");
-	let recognizedTerms = ["help"]
+	let recognizedTerms = ["help", "info", "contact"]
 // Initialize list with predefined data
 	for (let i = 0; i < data.length; ++i) {
 		let li = document.createElement('li');
@@ -61,6 +65,15 @@
 				list.appendChild(li);
 				li.innerText = "Error, " + command + " is not a recognizable term."
 				list.appendChild(li);
+				}
+				else
+				{
+					personID = recognizedTerms.indexOf(command)
+					if(personID == 0)
+					{
+						li.innerText = "Welcome to Frederick Security Terminal. \nFor proper information, type info. \nFor contact information, type contact. \nAny unauthorized access of this terminal is not permitted."	
+						list.appendChild(li);
+					}
 				}
 			}
 

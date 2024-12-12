@@ -29,7 +29,7 @@
 
 .mainWindow {
 	margin-top: 24px;
-	font-family: typewriter;
+	font-family: hack;
 	font-size: 18px;
 	color: green;
 	width: 100%
@@ -44,20 +44,20 @@ input[type=text] {
   border: none;
   background-color: black;
   font-size: 18px;
-  font-family: typewriter;
+  font-family: hack;
   color: green;
   outline: none !important;
 }
  
 
 @font-face {
-  font-family: typewriter;
-  src: url('../assets/typewriter.ttf');
+  font-family: hack;
+  src: url('https://cdn.jsdelivr.net/npm/hack-font@3.3.0/build/web/hack-subset.css');
 }
 
 body {
 	background-color: black;
-	font-family: typewriter;
+	font-family: hack;
 	color: lightgrey;
   background:#000;
 }
@@ -65,7 +65,7 @@ body {
 .easyMenu {
 	position: absolute;
 	bottom: 5px;
-	font-family: typewriter;
+	font-family: hack;
 	font-size: 18px;
 	width: 100%;
 }

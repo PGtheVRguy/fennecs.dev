@@ -1,0 +1,11 @@
+{
+	"dir" : {
+		"files" : ["home", "private"],
+		"home" : {
+			"files" : ["log1", "log2"]
+		},
+		"private" : {
+			"files" : ["log1", "log2"]
+		}
+	}
+}
