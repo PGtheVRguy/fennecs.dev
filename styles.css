@@ -14,7 +14,10 @@
   font-family: font_IBM;
   src: url(fonts/IBM.ttf);
 }
-
+@font-face {
+  font-family: font_concert;
+  src: url(fonts/ConcertOne-Regular.ttf);
+}
 
 
 :root {
@@ -329,7 +332,7 @@ width = 50%,
   color: rgb(139, 66, 146);
 }
 
-#NavBar {
+#NavBar-d { /* This is for the main navbar */
   background-color: #001220;
   overflow: hidden;
   z-index: 420;
@@ -340,8 +343,11 @@ width = 50%,
   width: 100%;
 
 }
-#NavBar a {
-  color: white;
+
+#NavBar-d a { 
+  color: white; 
+  font-family: font_concert;
+  text-decoration: none;
   text-shadow: none;
   text-align: center;
   padding: 40px;
@@ -352,6 +358,39 @@ width = 50%,
   padding-top: 20px;
   padding-bottom: -20px;
 }
+
+
+#NavBar-m { /* This is for the mobile navbar, eventually I want to make it so theres just one navbar but im having issues and need this bug fixed NOW */
+  background-color: #001220;
+  overflow: hidden;
+  z-index: 420;
+  /*border-radius: 0% 0% 98% 75%;*/
+  position: fixed;
+  margin-right: 0%;
+  padding-right: 0%;
+  width: 100%;
+
+}
+
+#NavBar-m a { 
+  color: white; 
+  font-family: font_concert;
+  text-decoration: none;
+  text-shadow: none;
+  text-align: center;
+  padding: 40px;
+  display: flexbox;
+  flex-flow: column;
+  padding-left: 50px;
+  padding-right: auto;
+  padding-top: 30px;
+  padding-bottom: auto;
+  z-index: 420;
+}
+
+
+
+
 .sticky {
   position: fixed;
   top: 0;

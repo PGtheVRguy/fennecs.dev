@@ -10,24 +10,9 @@
     <!-- Load external CSS styles -->
     <link rel="stylesheet" href="/styles.css?version=20">
     <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <script src="/scripts.js"></script>
     <script>
-        function loadNavbar() {
-            fetch('/navbar.html')
-                .then(response => response.text())
-                .then(data => {
-                    document.getElementById('NavBar').innerHTML = data;
-                })
-                .catch(error => console.error('Error loading navbar:', error));
-            fetch('/footer.html')
-                .then(response => response.text())
-                .then(data => {
-                    document.getElementById('Footer').innerHTML = data;
-                })
-                .catch(error => console.error('Error loading footer:', error));
-
-        }
         window.onload = loadNavbar;
-
     </script>
     <!-- Internal styles -->
 </head>
@@ -89,7 +74,6 @@
         </div>
         <br>
         <!-- Load external JavaScript -->
-        <script src="scripts.js"></script>
 
     </body>
     
