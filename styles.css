@@ -400,6 +400,7 @@ width = 50%,
     width: 100px; /* Set the image width */
     height: auto; /* Maintain aspect ratio */
     display: block; /* Prevent extra space below the image */
+    cursor: pointer;
   }
 }
 
