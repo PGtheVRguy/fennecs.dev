@@ -46,13 +46,35 @@ h1 {
   font-weight: normal;
 }
 
+/*
 .box {
   margin: 20px;
   padding: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
   background-color: rgba(0, 0, 0, 0.5);
   border-radius: 10px;
   position: relative;
-  z-index: 4; /* Lower z-index for the rest of the content */
+  z-index: 4; 
+  font-size: large;
+}
+.box::after {
+  content: "";
+  display: table;
+  clear: both;
+}*/
+
+.box {
+  display: flex;
+  align-items: flex-start;
+  margin: 20px;
+  padding: 10px;
+  background-color: rgba(0,0,0, 0.5);
+  border-radius: 10px;
+  position: relative;
+  font-size: large;
+}
+.box li {
   font-size: large;
 }
 
@@ -331,62 +353,101 @@ width = 50%,
 .blogButton:hover {
   color: rgb(139, 66, 146);
 }
+/* Mobile Specific */
+@media (max-width: 626px) {
+  #NavBar {
+    background-color: #001220;
+    z-index: 420;
+    position: fixed;
+    width: 100%;
+    padding-top: 5px;
+    padding-bottom: 15px;
+    display: block;
+  }
 
-#NavBar-d { /* This is for the main navbar */
-  background-color: #001220;
-  overflow: hidden;
-  z-index: 420;
-  border-radius: 0% 0% 98% 75%;
-  position: fixed;
-  margin-right: 0%;
-  padding-right: 0%;
-  width: 100%;
+  #NavLinks {
+    display: none; /* Initially hidden */
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+    width: 100%; /* Make sure it takes full width */
+    justify-content: center; /* Center the links vertically */
+  }
 
+  #NavLinks a {
+    color: white;
+    font: font_concert;
+    text-decoration: none;
+    text-align: center;
+    padding: 15px 20px;
+    display: block;
+    width: 100%; /* Make links take full width */
+  }
+
+  #NavLinks .mobile-home {
+    display: block; /* Visible only on mobile */
+  }
+
+  #NavIcon {
+    margin-left: 0;
+    margin-right: 0;
+    display: flex;
+    justify-content: center; /* Center the icon */
+    align-items: center; /* Center the icon vertically */
+  }
+
+  #NavIcon img {
+    width: 100px; /* Set the image width */
+    height: auto; /* Maintain aspect ratio */
+    display: block; /* Prevent extra space below the image */
+  }
 }
 
-#NavBar-d a { 
-  color: white; 
-  font-family: font_concert;
-  text-decoration: none;
-  text-shadow: none;
-  text-align: center;
-  padding: 40px;
-  float: left;
-  display: block;
-  z-index: 420;
-  padding-left:40px;
-  padding-top: 20px;
-  padding-bottom: -20px;
+/* Desktop Specific */
+@media (min-width: 625px) {
+  #NavBar {
+    background-color: #001220;
+    z-index: 420;
+    position: fixed;
+    width: 100%;
+    padding-top: 5px;
+    padding-bottom: 15px;
+    display: flex;
+  }
+
+  #NavLinks {
+    display: inline-flex; 
+    justify-content: flex-start;
+    align-items: center; 
+    flex-wrap: nowrap;
+  }
+
+  #NavIcon img {
+    cursor: pointer;
+    /*display: flex;*/
+    max-width: 100px;
+    margin-right: auto; 
+    width: auto;
+    height: auto; 
+    padding-left: 20px;
+  }
+
+  #NavLinks a {
+    color: white;
+    font: font_concert;
+    text-decoration: none;
+    display: inline-flex;
+    padding: 0 20px;
+  }
+
+  #NavLinks .mobile-home {
+    display: none; /* Hide on larger screens */
+  }
 }
 
 
-#NavBar-m { /* This is for the mobile navbar, eventually I want to make it so theres just one navbar but im having issues and need this bug fixed NOW */
-  background-color: #001220;
-  overflow: hidden;
-  z-index: 420;
-  /*border-radius: 0% 0% 98% 75%;*/
-  position: fixed;
-  margin-right: 0%;
-  padding-right: 0%;
-  width: 100%;
 
-}
 
-#NavBar-m a { 
-  color: white; 
-  font-family: font_concert;
-  text-decoration: none;
-  text-shadow: none;
-  text-align: center;
-  padding: 40px;
-  display: flexbox;
-  flex-flow: column;
-  padding-left: 50px;
-  padding-right: auto;
-  padding-top: 30px;
-  padding-bottom: auto;
-  z-index: 420;
-}
 
 
 

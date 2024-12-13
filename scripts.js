@@ -109,40 +109,57 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
-/*
-const navbar = document.querySelector('#NavBar');
-let navtop = navbar.offsetTop;
-function stickynavbar() {
-  if (window.scrollY >= navtop) {    
-    navbar.classList.add('sticky');
-  } else {
-    navbar.classList.remove('sticky');    
-  }
-}
-window.addEventListener('scroll', stickynavbar);
-*/
 
 function loadNavbar() {
-    if(window.mobileCheck == false)
-    {
-        navbarfile = '/navbar-m.html'
-    }
-    else
-    {
-        navbarfile = '/navbar-d.html'
-    }
-    fetch(navbarfile) //Desktop navbar
+    // Load the navbar
+    fetch('/navbar.html')
         .then(response => response.text())
         .then(data => {
             document.getElementById('NavBar').innerHTML = data;
+            initializeNavBar(); // Call the navbar initialization function
         })
         .catch(error => console.error('Error loading navbar:', error));
     
+    // Load the footer
     fetch('/footer.html')
         .then(response => response.text())
         .then(data => {
             document.getElementById('Footer').innerHTML = data;
         })
         .catch(error => console.error('Error loading footer:', error));
-
 }
+
+// Navbar initialization function
+function initializeNavBar() {
+    const navIcon = document.getElementById("NavIcon");
+    const navLinks = document.getElementById("NavLinks");
+    const mobileHomeLink = document.querySelector(".mobile-home");
+
+    function toggleMenu(event) {
+        event.preventDefault(); // Prevent navigation when used as a toggle
+        navLinks.style.display = navLinks.style.display === "flex" ? "none" : "flex";
+    }
+
+    function updateNavBar() {
+        if (window.innerWidth <= 626) {
+            // Mobile Mode: Make icon a toggle button
+            navIcon.removeAttribute("href");
+            navIcon.addEventListener("click", toggleMenu);
+            mobileHomeLink.style.display = "block"; // Show mobile home link
+            navLinks.style.display = "none"; // Hide menu by default
+        } else {
+            // Desktop Mode: Make icon a link
+            navIcon.setAttribute("href", "/");
+            navIcon.removeEventListener("click", toggleMenu);
+            mobileHomeLink.style.display = "none"; // Hide mobile home link
+            navLinks.style.display = "flex"; // Ensure menu is visible
+        }
+    }
+
+    // Run on load and window resize
+    window.addEventListener("resize", updateNavBar);
+    updateNavBar(); // Initialize on load
+}
+
+// Call loadNavbar() when the DOM is ready
+document.addEventListener("DOMContentLoaded", loadNavbar);
