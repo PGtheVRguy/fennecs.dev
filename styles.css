@@ -550,7 +550,9 @@ code {
 .blog-body img {
   max-width: 80%;
 }
-
+.blog-body p1 {
+  font-size: xx-large;
+}
 hr.blog-line {  
   margin-top: 20px;
   margin-bottom: 20px;

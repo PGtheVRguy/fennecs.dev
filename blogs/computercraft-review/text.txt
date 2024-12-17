@@ -10,4 +10,4 @@ However, that isn't what I want to talk about today. One of the other powerful b
 
 Now although with those downsides, these bots can handle some serious stuff. One of the first things I did when I crafted a turtle in my recent 2 week phase with friends was programmed a quarry. I luckily already spent two days straight learning CC with my banking project. Now I am currently working on a shopping system with bots handling the logistics. Hell, why not just *show* you what they are capable of! <br><br>
 
-The image here showcases 
+The image here showcases the main prototype of a storage tube. Each chest holds a unique item that is saved within the turtles program. One issue with the turtles is that they restart upon chunk loading, so I need to design a system where the turtle can re-zero itself back home. What I designed is a small algorithm where the robot will try to find which way moves around the tube, then move back and forth until it sees the redstone block. One that's done, it counts its current position as home. The turtles also cant actually see their rotation,   

@@ -5,5 +5,12 @@
             "url": "game-of-the-year-2024",
             "date": "12-11-24",
             "show": "false"
+        },
+        {
+            "name": "The Design of TROF3R: How not to make a parody",
+            "summary": "Showcasing the design of a game some friends and I made, and how the game suffered poorly",
+            "url": "how-frederick-was-made",
+            "date": "12-17-24",
+            "show": "true"
         }
     ]
