@@ -2,16 +2,16 @@
 <html lang="en">
 
 <head>
+
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>fennecs.dev</title>
-
+    
     <!-- Load external CSS styles -->
-    <link rel="stylesheet" href="/styles.css">
-    <link rel="icon" type="image/x-icon" href="../../favicon.ico">
-    <script src = "/scripts.js"></script>
+    <link rel="stylesheet" href="/styles.css?version=20">
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <script src="/scripts.js"></script>
     <script>
-
         function fetchAndDisplayText() {
             console.log('Attempting to fetch text.txt...');
             fetch('text.txt')
@@ -32,34 +32,53 @@
                     console.error('There has been a problem with your fetch operation:', error);
                 });
         }
-
-        window.onload = function() {
+        
+        window.onload = function(){
             loadNavbar();
             fetchAndDisplayText();
         };
+
     </script>
     <!-- Internal styles -->
 </head>
+<!-- #001220 -->
 
+<div id="NavBar"></div>
 <body>
-    <div id="NavBar"></div>
-    <div class="header">
-        <div class="spacer layer1"></div>
-        <img src="/title.png" alt="Title Image" class="title" width="40%" height="auto">
-        <div id="emitter-container"></div>
+<div class = "mainBody">
+    <br><br><br><br><br>
+    <div class = "blog-title">The Fennecs Awards!!!</div>
+    <div class = "blog-body" id="textContainer">
+        
     </div>
-
-    <div class="mainBody">
-        <a href="../fennec1.html" class="blogText">GO BACK</a>
-        <div id="textContainer" class="blogText"></div>
-        <br><br><br><br><br><br><br><br><br><br><br><br>
-        <div>hi</div>
-    </div>
-
     
-    <script src="/scripts.js"></script>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+</div>
 
+
+
+<script src="/scripts.js"></script>
 </body>
 
+
 <div id="Footer"></div>
+<!--<div class = "footer">
+    <section>
+        <p>
+            Thanks for visiting fennecs.dev <br>
+            This website is maintained by PGtheVRguy/fennecsdev<br>
+            <a href ="https://mastodon.gamedev.place/@PGtheVRguy">Follow me on Mastodon</a>
+            <br>
+            <a href ="https://www.youtube.com/channel/UCwW2I9lbUbqT9u-d7B2GOew/">Follow me on YouTube</a>
+            <br>
+        </p>
+
+
+    </section>
+    &nbsp
+    <a rel="me" href="https://mastodon.gamedev.place/@PGtheVRguy"></a>
+
+</div> -->
+
+
 </html>

@@ -1,0 +1,16 @@
+    [
+        {
+            "name": "The Fennecs Awards 2024!",
+            "summary": "Today we announce the first annual Fennecs Game Awards! The most luxorious and important game award that has every existed. Today we announce all the game categories, rules, and more!",
+            "url": "game-of-the-year-2024",
+            "date": "12-11-24",
+            "show": "false"
+        },
+        {
+            "name": "ComputerCraft: The Best Minecraft Mod",
+            "summary": "Discussing what I find as one of the coolest Minecraft Mods to ever exist, one where it allows the users to program robots in lua while remaining survival friendly.",
+            "url": "computercraft-review",
+            "date": "12-13-24",
+            "show": "true"
+        }
+    ]

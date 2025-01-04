@@ -9,7 +9,6 @@
 		<p class="mainPageText">FREDERICK SECURITY TERMINAL</p>
 	</div>
 	<div class="mainWindow">
-		<ul id="noList" style="list-style: none;"></ul>
 		<ul id="list" style="list-style: none;"></ul>
 		<!--
 		<p>security>: LOG 01/05/15</p>
@@ -33,10 +32,14 @@
 	
     <!-- I stole all this from https://stackoverflow.com/questions/61420424/creating-command-interface-styled-html-site -->
 	<script>
+
+
+	//import data from '/files.json'
+	//console.log(data);
 	// Reference the list element
 	let data = ["LOG 01/05/15", "Website accessed by [IP BLOCKED]", "Awaiting further action..."];
 	let list = document.getElementById("list");
-	let recognizedTerms = ["help", "clear", "info", "contact"]
+	let recognizedTerms = ["help", "info", "contact"]
 // Initialize list with predefined data
 	for (let i = 0; i < data.length; ++i) {
 		let li = document.createElement('li');
@@ -60,33 +63,20 @@
 				{
 				li.innerText = "security> " + command;
 				list.appendChild(li);
-				li.innerText = "Error, " + command + " is not a recognizable term.";
+				li.innerText = "Error, " + command + " is not a recognizable term."
 				list.appendChild(li);
 				}
 				else
 				{
-					var myID = recognizedTerms.indexOf(command);
-					if(myID == 0)
+					personID = recognizedTerms.indexOf(command)
+					if(personID == 0)
 					{
-						li.innerText = "Warning! help.doc DOES NOT EXIST!";
+						li.innerText = "Welcome to Frederick Security Terminal. \nFor proper information, type info. \nFor contact information, type contact. \nAny unauthorized access of this terminal is not permitted."	
 						list.appendChild(li);
-					}
-					if(myID == 1)
-					{
-						list.pop()
-					}
-					if(myID == 2)
-					{
-						li.innerText ="This is the security system developed by Fredericks Franchise Program for Fredericks Labor Land. For any questions, please contact the facility manager."
-						list.appendChild(li);
-					}
-					if(myID == 3)
-					{
-						li.innerText =  "Cannot figure out contact info of facility manager. 0"
 					}
 				}
 			}
-			
+
 			commandInput.value = ""; // Clear the input field
 		}
 	}

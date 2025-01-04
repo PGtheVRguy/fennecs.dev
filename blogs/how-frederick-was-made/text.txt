@@ -1,0 +1,61 @@
+<a href=https://store.steampowered.com/app/319510/Five_Nights_at_Freddys/>Five Nights at Freddy's</a> is a video  game my friends and I have been playing since their release in 2014. Of course, we ran through the stereotypical "FNAF-Phase" children had at the time and sat for hours watching YouTubers playthrough. <br><br>
+
+Now, YouTubers would commonly play through "fangames" of FNAF that were extremely popular after the release of the second game. They were so popular and rapidly produced people could practically make a whole third game out of it, which is what a certain member of the community does.
+<br><br>
+
+Now I won't go in depth on the beauty of The Return To Freddys, but it’s such a hilariously bad fan game series with incoherent plot points like super cancer and sentient Japanese robots with strip clubs hidden below pizza places. Obviously, the perfect room for a parody.
+<br><br>
+
+This was the main inspiration behind our game, "The Revival of Fredericks 3: Redux". The main design philosophy was to build a FNAF fan game with the poor 3D models of TRTF and outright offensive to human-kind lore.
+<br><br>
+
+<p1>THE TECHNICAL </p1><br>
+
+So lets go over what we had to build.
+<br>
+<br>
+-An accurate AI movement system similar to the original games where characters move from camera to camera.<br>
+-An office with togglable doors <br>
+-A progressive night system that allows us to not hardcode any elements of the nights beyond aggression levels.<br>
+-Some unique gameplay mechanics we haven't seen before <br>
+-A power system similar to the first game.
+<br><br>
+
+Our game engine of choice was GameMaker. More advanced and easier to use than ClickTeam (the original engine of FNAF and TRTF), but means we would need to make a lot of our implementations from the ground up, which was fine for me. The biggest challenge was building an expandable AI system where we can easily choose what rooms characters can go into. <br><br>
+Its safe to say I am NOT proud of my implementation.
+<br><br>
+<img src="aicsv.png" alt="An excel sheet used to locate where the characters can go."></img><br>
+<br>
+No, this isn't me charting on for my own sake on where the characters can go, this is how you program the characters path. Let's break it down by isolating only rows 1-7 and column A-I. <br>
+So the AI works where we take (B,1)-(I,1) is the characters current room ID (this can be seen in game as the Camera #), then everything horizontally below that cell is the possible rooms/cameras the character can now move to with "e" signifying the end of that row. "RightHall" and "MainHall" are both (unfortunately) hard coded positions for the office halls. <br><br>
+
+Column A is reserved for informational data, like the characters ID and name, this is unused in the original project. This isn't great however  because <br><br>
+A. The system requires me to open a spreadsheet program for simple data <br>
+B. With that setup, I'm limited to how many potential move spots a character can have, not good if I planned to reuse the TROF3R codebase. <br>
+After a few months post launch, I did revise the system into a json file. <br><br>
+<img src="json.png" alt="A json file split into the separate categories of name, start, home, and all camera positions."></img><br><br>
+
+This new system is useful as it allows us to easily and infinitely expand the rooms characters can go to without the weird mess of the original system. JSON for the WIN!!!
+
+<br><br>
+
+There arent many issues faced in development after this point. TROF3R, akin to its inspirations, is just 2D pre-rendered assets. However to ensure things aren't pixelated each asset is rendered for 720p in mind. We found out however that this causes lag when the player switches cameras due to the way GameMaker tries to dynamically load in sprites. So, we would have to attempt to load in assets beforehand, and ensure they dont unload. The best way to do this without loading every individual asset would be to separate everything into distinct <a href=https://manual.gamemaker.io/monthly/en/index.htm#t=Settings%2FTexture_Groups.htm>Texture Groups</a>, and preloading them when the player starts a night. This does cause load times before the main game starts, but its better to have one large load chunk at the start then waiting for the game to load mid-game. <br><br> The best approach would be to load each of the camera assets in the main menu (expecting the player to PLAY the game), and potentially to load one asset at a time (or async loading assets, GameMaker when??)
+
+Overall with the TROF3R codebase, everything is pretty well done beyond those loading issues and AI issues, which has been fixed with later iterations of the codebase or planned to be dealt with. But what are the gameplay issues?
+
+<br><br><p1>GAMEPLAY</p1><br><br>
+
+
+The gameplay in TROF3R is legitimately the worst game I have ever designed. It has one redeeming factor which is the "Hacker" who had to be nerfed before release due to one of its most hilarious abilities relying entirely on the fact that the game used to not be fullscreen (a common habit for me in development for me is to play games in windowed). Essentially the way the hacker worked was that when awake, it would choose between a list of various abilities. In the final release those are playing videos, displaying images of foxes gained from a <a href=https://api.tinyfox.dev/img?animal=fox>silly fox image API</a> that this website used to use heavily, open browser tabs for a preselected amount of websites or videos (nothing malicious, just eel slap and cringey fnaf letsplays), and moving your camera buttons around. Beyond that, pretty much harmless. However, it was hilarious coming up with ideas to freak out and mess with the player that we ultimately had to scrap due to it either breaking the game in unexpected ways (like show your username, or the previously mentioned cut feature where the un fullscreen window would start moving (which I think was acceptable to cut fullscreen for it to live)) <br><br>
+
+However, that was the only unique gameplay mechanic we had. Everything else was cookie cutter FNAF. We had a foxy, a puppet, and three main characters. Sure, the joke was that that's what TRTF did. But we could've <i>at least</i> done some fun mechanics. <br><br>
+
+TROF3R did poorly, REAL poorly. Little under 30 people actually downloaded the game between the two initial release platforms. We (I) eventually ported the game to mobile both as a learning opportunity and also to try and get some people to at least play TROF, but even with this last leg it still failed horribly. <br><br>
+
+These issues have been issues we’ve been attempting to fix recently with a small project we've been working on that we hope to announce <a href="/trof">soon</a>... <br><br>
+
+Basically, if you are attempting a FNAF inspired game, remember that you need something unique to at least make it fun. Like a character that occasionally jumps at you and requests you to make it a drink, or a unique power-based gameplay mechanic where you have to deal with stress/load, and all characters have unique ways to be countered alongside a tried and true method where several different solutions work and modify others. Idk, you'll have to look out for more info. :3    
+
+
+
+

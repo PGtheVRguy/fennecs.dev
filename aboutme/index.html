@@ -10,22 +10,8 @@
     <!-- Load external CSS styles -->
     <link rel="stylesheet" href="/styles.css">
     <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <script src = "/scripts.js"></script>
     <script>
-        function loadNavbar() {
-            fetch('/subnavbar.html')
-                .then(response => response.text())
-                .then(data => {
-                    document.getElementById('NavBar').innerHTML = data;
-                })
-                .catch(error => console.error('Error loading navbar:', error));
-            fetch('/footer.html')
-                .then(response => response.text())
-                .then(data => {
-                    document.getElementById('Footer').innerHTML = data;
-                })
-                .catch(error => console.error('Error loading footer:', error));
-
-        }
     
         window.onload = loadNavbar;
     </script>
@@ -54,31 +40,31 @@
         
         <!--<img src="face.png" alt="Face Image">-->
 
-        <div class="box" style="position: absolute;">
-            <div style="width: 10%; float: left">
+        <div class="box" >
+            <div style="flex: 0 0 10%; margin-right: 10px">
                 <img src="face.jpg" width="64", height="auto">
             </div>
-            <div style="width: 90%; float:right">
+            <div style="flex: 1;">
                 <br><br>
                 Hey there, I'm Noah Sapelak! Currently I attend Holly High School/Oakland Schools Technical Campus Northwest, all while entering my senior year! I spend my time at school taking AP classes, and helping out the schools robotics team, Hollywood Robotics (7211)! When I'm not doing that, I like to play on my computer and work on projects!
             </div>
         </div>
         <br><br><br>
-        <br><br><br>
-        <br><br><br>
-        <div class="box">
-            I have plenty of experience in several tools!<br> 
-             -6 years using GameMaker: Studio 2 <br>
-             -Using Java to program FRC Robots (<a href="https://www.thebluealliance.com/team/7211">7211</a>) <br>
-             -Programming in Python and C++ to program with microcontrollers (RPI, Arduino, etc)<br>
-             -Using Blender, OnShape, and Solidworks to craft 3D models<br>
-             -Setup and maintain 3D printers (Bambu, Anycubic, etc.) <br>
-             -Edit videos in Davinci Resolve <br>
-             -Programmed this website in HTML, CSS, and JS! <br>
+        <div class="box" style="flex-direction: column; text-align: center; justify-content: center; align-items: center;">
+            I have plenty of experience in several tools!<br>
+             <ul> 
+             <li>-6 years using GameMaker: Studio 2 </li>
+             <li>-Using Java to program FRC Robots (<a href="https://www.thebluealliance.com/team/7211">7211</a>) </li>
+             <li>-Programming in Python and C++ to program with microcontrollers (RPI, Arduino, etc)</li>
+             <li>-Using Blender, OnShape, and Solidworks to craft 3D models</li>
+             <li>-Setup and maintain 3D printers (Bambu, Anycubic, etc.) </li>
+             <li>-Edit videos in Davinci Resolve </li>
+             <li>-Programmed this website in HTML, CSS, and JS! </li>
+            </ul>
             <!--<img src="face.jpg" width="64", height="auto">-->
             
         </div>
-        <br><br>
+        <br><br><br>
         <div class="contact">
             CONTACT ME AT <a href="mailto:noah@fennecs.dev">NOAH@FENNECS.DEV</a>
         </div>
