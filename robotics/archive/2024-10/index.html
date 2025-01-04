@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>fennecs.dev</title>
+
+    <!-- Load external CSS styles -->
+    <link rel="stylesheet" href="/styles.css">
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <script>
+        function loadNavbar() {
+                    fetch('/subnavbar.html')
+                        .then(response => response.text())
+                        .then(data => {
+                            document.getElementById('NavBar').innerHTML = data;
+                        })
+                        .catch(error => console.error('Error loading navbar:', error));
+                    fetch('/footer.html')
+                        .then(response => response.text())
+                        .then(data => {
+                            document.getElementById('Footer').innerHTML = data;
+                        })
+                        .catch(error => console.error('Error loading footer:', error));
+
+                }
+        window.onload = function() {
+            loadNavbar();
+        };
+    </script>
+    <!-- Internal styles -->
+</head>
+
+<body>
+    <div id="NavBar"></div>
+    
+    <center>
+    <div class="mainBody">
+        <br><br><br><br>
+            <div class="contact">
+        
+            <div class="roboticsUpdate">
+                Today (11/12), I wont be at the school till 5-6, (curse the end of trimesters and AP Lit!) and so I giveth thee thy first challenge! <br>
+                Last time we had robotics, you got the intake on Charlotte working! Now we didnt have a meeting last week so today I recommend you <br>
+                to run through your code you wrote last time, and try to comment each line on what to do. <br>
+                For example: <br>
+                <img src="./commentExample.png"><br>
+                You can start code comments with "//", then everything on that line after it is a comment! <br>
+                You can put ANYTHING in comments, they arent seen by the bot, so use it to write down information of what you are doing so that you can know what the code you write is! 
+                <br><br>
+                Then, once you feel like you're re-equipped with your EPIC PROGRAMMING KNOWLEDGE, you can follow along <a href="https://docs.google.com/presentation/d/1lGaOGetbN4MWcHyqQgxxwYGNhckIAWZdcNGApjl19Ms/edit?usp=sharing"> THIS EPIC SLIDESHOW</a> to get the robot DRIVING!!
+                <br><br> (The slideshow is adapted from this video you watched last time, it can be useful to hear why they do what they do!)
+                <a href="https://www.youtube.com/playlist?list=PLNAE83HxN0uuv2wTH_ggVmIU76Tk0zMWS">Link to the playlist</a>
+                <br>
+                <br>
+                <br>
+                Now if you're able to get the robot driving today, we may have time to learn about PID loops!
+                <br>
+                <br>
+                AND IF YOU NEED HELP: <br>
+                Although I'm doing homework, I <i>guessss</i> I can help you out. I am available on the robotics discord, just ping"Noah (rulz)" / "PGtheVRguy"<br><br><br>
+            </div>
+        <br><br>
+        <br><br>
+        The following is a list of useful ROBOTICS resources </div><br><br>
+        <a href="https://docs.wpilib.org/en/stable/docs/zero-to-robot/step-2/wpilib-setup.html" class="blogButton">WPILib Editor</a> <br> This is the main code IDE<br><br>
+        <a href="https://github.com/TeamHollywood7211" class="blogButton">Hollywood Github</a> <br> This is the GitHub repo yo <br><br>
+        <a href="https://github.com/PGtheVRguy/NewCharlotteCode" class="blogButton">Charlotte Code</a> <br> This is my Charlotte Code Repo (i forgor to put it on the main robot) <br><br>
+        
+        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+        <div></div></center>
+    </div>
+
+    <script src="/scripts.js"></script>
+</body>
+
+<div id="Footer"></div>
+
+</html>

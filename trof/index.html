@@ -9,6 +9,7 @@
 		<p class="mainPageText">FREDERICK SECURITY TERMINAL</p>
 	</div>
 	<div class="mainWindow">
+		<ul id="noList" style="list-style: none;"></ul>
 		<ul id="list" style="list-style: none;"></ul>
 		<!--
 		<p>security>: LOG 01/05/15</p>
@@ -35,7 +36,7 @@
 	// Reference the list element
 	let data = ["LOG 01/05/15", "Website accessed by [IP BLOCKED]", "Awaiting further action..."];
 	let list = document.getElementById("list");
-	let recognizedTerms = ["help"]
+	let recognizedTerms = ["help", "clear", "info", "contact"]
 // Initialize list with predefined data
 	for (let i = 0; i < data.length; ++i) {
 		let li = document.createElement('li');
@@ -59,11 +60,33 @@
 				{
 				li.innerText = "security> " + command;
 				list.appendChild(li);
-				li.innerText = "Error, " + command + " is not a recognizable term."
+				li.innerText = "Error, " + command + " is not a recognizable term.";
 				list.appendChild(li);
 				}
+				else
+				{
+					var myID = recognizedTerms.indexOf(command);
+					if(myID == 0)
+					{
+						li.innerText = "Warning! help.doc DOES NOT EXIST!";
+						list.appendChild(li);
+					}
+					if(myID == 1)
+					{
+						list.pop()
+					}
+					if(myID == 2)
+					{
+						li.innerText ="This is the security system developed by Fredericks Franchise Program for Fredericks Labor Land. For any questions, please contact the facility manager."
+						list.appendChild(li);
+					}
+					if(myID == 3)
+					{
+						li.innerText =  "Cannot figure out contact info of facility manager. 0"
+					}
+				}
 			}
-
+			
 			commandInput.value = ""; // Clear the input field
 		}
 	}
