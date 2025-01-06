@@ -235,7 +235,7 @@ a:visited {
 
 .layer1 {
   position: absolute;
-  background-image: url('waves.svg');
+  background-image: url('/assets/vector/waves.svg');
   z-index: 1; /* Keep the waves.svg on top */
 }
 
