@@ -474,6 +474,14 @@ width = 50%,
   font-size: large;
   text-align: center;
 }
+.socials{
+  /* centers the social media icons */
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 20%;
+  
+}
 
 code {
   background-color: #64506b;
