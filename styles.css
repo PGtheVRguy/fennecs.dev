@@ -570,14 +570,35 @@ hr.blog-line {
   border-radius: 10px;
 }
 
-
-.portfolio {  
-  display: flex;
-  align-items: center;
-  margin: 20px;
-  padding: 10px;
-  background-color: rgba(0,0,0, 0.5);
-  border-radius: 10px;
-  position: relative;
-  font-size: large;
+@media (min-width: 900px) { /* desktop */
+  .portfolio {  
+    display: flex;
+    align-items: center;
+    margin: 20px;
+    padding: 10px;
+    background-color: rgba(0,0,0, 0.5);
+    border-radius: 10px;
+    position: relative;
+    font-size: large;
+  }
+  .portfolio img {
+    border-radius: 2%;
+  }
 }
+@media (max-width: 900px) { /* mobile */
+  .portfolio {  
+    
+    align-items: center;
+    margin: 20px;
+    padding: 10px;
+    background-color: rgba(0,0,0, 0.5);
+    border-radius: 10px;
+    font-size: large;
+  }
+  .portfolio img {
+    border-radius: 2%;
+    width: 100%;
+    height: auto;
+  }
+}
+
