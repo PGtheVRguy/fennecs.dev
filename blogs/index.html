@@ -16,7 +16,7 @@
             fetch("./articles.json")
                 .then((response) => response.json())
                 .then(json => {
-                
+                json.reverse();
                 const TPL_Results = item => 
                 `
                     
@@ -25,7 +25,7 @@
                         <div class="blog-description"><b>${item.date}</b></div>
                         <div class="blog-description">${item.summary}</div>
                         <hr class = "blog-line">
-                    </div>`;
+                    </div><br>`;
                 
                 document.querySelector("#results").innerHTML = json.map(item => TPL_Results(item)).join('');
             })
@@ -54,7 +54,7 @@
     <div class="Results" id="results"></div>
 
     
-    <br><br><br><br><br><br><br><br><br><br><br><br><br<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    
     
     <script src="/scripts.js"></script>
     </body>

@@ -494,6 +494,23 @@ code {
   border-radius: 10px;
 }
 
+.warning {
+  background-color: #e191fe;
+  border: 1px solid #e191fe;
+  color: #b80000;
+  display: block;
+  text-align: center;
+  font-size: x-large;
+  /*padding: 20px;*/
+  text-shadow: none;
+  font-family: code;
+  border-radius: 10px;
+  padding-left:50px;
+  padding-right: 50px;
+  margin-left:20%;
+  margin-right:20%;
+}
+
 .errorPage {
   background:  #001220;/*#240a45; /*240a45 */
   color: #FFFFFF;
