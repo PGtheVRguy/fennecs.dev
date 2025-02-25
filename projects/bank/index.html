@@ -12,30 +12,11 @@
     <script src = "/scripts.js"></script>
     <script>
 
-        function fetchAndDisplayText() {
-            console.log('Attempting to fetch text.txt...');
-            fetch('text.txt')
-                .then(response => {
-                    console.log('Fetch response received.');
-                    if (!response.ok) {
-                        throw new Error('Network response was not ok ' + response.statusText);
-                    }
-                    return response.text();
-                })
-                .then(text => {
-                    console.log('Text received:', text);
-                    // Set the fetched text as HTML content
-                    const textContainer = document.getElementById('textContainer');
-                    textContainer.innerHTML = text; // Use innerHTML to render HTML content
-                })
-                .catch(error => {
-                    console.error('There has been a problem with your fetch operation:', error);
-                });
-        }
+        
 
         window.onload = function() {
             loadNavbar();
-            fetchAndDisplayText();
+            fetchAndDisplayText('text.txt');
         };
     </script>
     <!-- Internal styles -->
