@@ -1,3 +1,21 @@
 To play this locally, <a href="local">click here</a>
 
-This game was created as part of a school assignment in my LA10 Honors class. This was based off a book I read around the time dubbed "1984" by George Orwells. This game is fairly simple where you just need to solve simple questions related to the game and showcase how you belong to the community (as in the book, those who go or showcase any form of hate to the major Government gets killed). However, a large portion of your score then comes from how much you rebell. The concepts in this game could be interesting, but the time crunch and lack of passion caused the game to be rather short and boring. 
+This game was created as part of a school assignment in my LA10 Honors class. This was based off a book I read around the time dubbed "1984" by George Orwells. This game is fairly simple where you just need to solve simple questions related to the book and showcase how you belong to the community (as in the book, those who go or showcase any form of hate/distrust to the major Government gets killed). However, a large portion of your score then comes from how much you rebell. The concepts in this game could be interesting, but the time crunch and lack of passion caused the game to be rather short and boring. 
+
+GAME RULES:
+
+This game substitutes lack of gameplay with a interesting-ish dynamic. The simple question game is endless, but you have two main values you must oversee.
+
+SANITY: Sanity is the only value you can directly see. It is forever at the bottom left of your screen and is how sane you are. Strangely, it doesnt ever go down (idk why, lets call it a bug), and is necessary for the final score. If you somehow get your sanity too low or too high, nothing happens. This is purely just for the final score.
+
+REPUTATION: You have an invisible reputation with Big Brother, it goes down with wrong questions, missed work, and writing in your journal. However, it increments with correct questions. The lower the rep, the higher the chances you get "vaporized" (killed) in the middle of the night.
+
+FINAL SCORE: Your final score is a multiplication of your SANITY and DAYS SURVIVED. 
+
+This version is a mildly repaired version of the original project meant for HTML5 (the original would crash when attempting to boot back to the menu). If you would like to view the source code, please go to the <a href="https://github.com/PGtheVRguy/1984/releases/tag/Release">GitHub</a>. 
+
+Additionally, I may in the future release 1.2 which adds a menu track, better gfx, and mild fixes.
+
+
+
+
