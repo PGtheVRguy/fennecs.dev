@@ -19,5 +19,13 @@
             "url": "game-of-the-year-2024-winners",
             "date": "2-4-25",
             "show": "false"
+        },
+        {
+            "name": "FRC Robot 2025 Code Review-ish!",
+            "summary": "I describe the intricate systems and auto features of team 7211s robot for 2025!",
+            "url": "frc-2025-robot-review",
+            "date": "4-8-25",
+            "show": "false"
+            
         }
     ]
