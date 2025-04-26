@@ -1,4 +1,3 @@
-The "uwuBank" system is a banking system for Create/ComputerCraft, without any commands or cheats.
 
 
 <div class="video-container">

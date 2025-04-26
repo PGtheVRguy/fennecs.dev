@@ -57,6 +57,31 @@ function initializeNavBar() {
     window.addEventListener("resize", updateNavBar);
     updateNavBar(); // Initialize on load
 }
+function fetchAndDisplayText(file) {
+    console.log('Attempting to fetch text.txt...');
+    fetch(file)
+        .then(response => {
+            console.log('Fetch response received.');
+            if (!response.ok) {
+                throw new Error('Network response was not ok ' + response.statusText);
+            }
+            return response.text();
+        })
+        .then(text => {
+            text = text.replace(/(?:\r\n|\r|\n)/g, '<br>');
+            console.log('Text received:', text);
+            // Set the fetched text as HTML content
+            const textContainer = document.getElementById('textContainer');
+            textContainer.innerHTML = text; // Use innerHTML to render HTML content
+        })
+        .catch(error => {
+            console.error('There has been a problem with your fetch operation:', error);
+        });
+}
+
+
+
+
 
 // Call loadNavbar() when the DOM is ready
 document.addEventListener("DOMContentLoaded", loadNavbar);

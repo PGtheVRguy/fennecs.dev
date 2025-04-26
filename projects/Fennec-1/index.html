@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>fennecs.dev</title>
+
+    <!-- Load external CSS styles -->
+    <link rel="stylesheet" href="/styles.css">
+    <link rel="icon" type="image/x-icon" href="../../favicon.ico">
+    <script src = "/scripts.js"></script>
+    <script>
+        function fetchAndDisplayText() {
+            console.log('Attempting to fetch text.txt...');
+            fetch('text.txt')
+                .then(response => {
+                    console.log('Fetch response received.');
+                    if (!response.ok) {
+                        throw new Error('Network response was not ok ' + response.statusText);
+                    }
+                    return response.text();
+                })
+                .then(text => {
+                    console.log('Text received:', text);
+                    // Set the fetched text as HTML content
+                    const textContainer = document.getElementById('textContainer');
+                    textContainer.innerHTML = text; // Use innerHTML to render HTML content
+                })
+                .catch(error => {
+                    console.error('There has been a problem with your fetch operation:', error);
+                });
+        }
+
+        window.onload = function() {
+            loadNavbar();
+            fetchAndDisplayText();
+        };
+    </script>
+    <!-- Internal styles -->
+</head>
+
+<body>
+    <div id="NavBar"></div>
+    <div class="header">
+        <div class="spacer layer1"></div>
+        <img src="/assets/images/title.png" alt="Title Image" class="title" width="40%" height="auto">
+        <div id="emitter-container"></div>
+    </div>
+
+    <div class="mainBody">
+        <center><a href="mission objective/article.html" class="blogButton">Mission Objective</a> <br>
+        Learn my main mission objective with the project <br>
+        <a href="soldering/article.html" class="blogButton">Soldering!!!</a> <br>
+        See the soldering station that I worked up over the Summer <br>
+        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+        <div></div></center>
+    </div>
+
+    <script src="/scripts.js"></script>
+</body>
+
+<div id="Footer"></div>
+
+</html>

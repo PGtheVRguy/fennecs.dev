@@ -1,0 +1,27 @@
+This year is my last year doing High School robots due to the fact that I graduate high school this year (exciting)! And after our not-so-successful year last year I knew I wanted to help get our team to worlds again. So, I tried to put in my all this year, even though the game was slightly annoying. This year, we had to collect cut PVC pipes (coral) and place them on a reef-inspired shaped batch of poles with differing heights, then collect green balls (algae), and place them in the side human player station where they are thrown into an area over the center of the field, or robots can manually place those balls into the center of the field for points. Attached is an image of the field.  
+
+<img src="./field.png">
+
+<a href = "https://firstfrc.blob.core.windows.net/frc2025/FieldAssets/2025FieldDrawings-FieldLayoutAndMarking.pdf">Image cropped from FRC 2025 Field Layout and Making</a>
+
+So on our robotics team, my main role is programming captain and robot operator. Last year I spent my entire time learning FRC programming, best practices, and the unfortunate worst practices. This year, I took that knowledge to the max to try and design the most efficient robot that solved many faults of prior designs, the main one im proud of is mechanical crashing.
+
+In 2023, our robot had an extending arm that also could rotate. This is due to the fact that the arm needed to point out and extend to place pieces, however the point the arm extends would surpass the floor, so if perchance the arm was tilted down and you extended the arm, it would crash into the ground and break. Or lets say you even decide to home the arm at any point from the furthest placing position, the arm would crash into the ground! This is due to the fact that the home function would just send the home command to all the functions at the same time instead of having them wait. 
+
+(Before going further heres a picture of our robot and the naming scheme of each "object")
+
+<img src="robot1.png">
+(Pictures from my friend <a href="https://bsky.app/profile/galaxythemb.bsky.social">Galaxy</a>)
+
+
+(The intake runs from the back and into the coral manipulator!)
+So to prevent any crashing, each object views the position of other objects and checks on them before moving. For example, the coral manipulator will not move if the algae manipulator isnt past a certain threshold to prevent bending the algae mechanism. Then during the homing command, the algae manipulator will not move till the coral manipulator is near home, then the elevator will not home until the algae manipulator is homed! Now, a word of caution. A reliance on all these mechanisms could mean that if a sensor breaks, we are screwed. However, I can very easily add a "BYPASS SAFETY" function like I did last year with our 2024 robots arm. But even if it could cause future issues, the safe zones were kinda the cause for our Innovation in Control Award. (Seriously they mentioned it in the script (however I didnt hear it since I was rush fixing the robot))
+
+<img src="./award-script.png">
+
+Beyond just looking at encoder values, we utilized distance sensors to see if any pieces were in our robot. An early issue we found was that our intake chute wont get a piece all the way down in our intake during auto. The robot, not knowing there is a piece in the intake, move the elevator. This would cause the elevator to crash into the coral, breaking the elevator. So, (this parts one of my ideas im proud of) we threw in a distance sensor in the intake. Then, if the distance sensor saw an object within x milimeters, it wont ever move the elevator! Due to this, the elevator never unecessarily moved the robots elevator in unsafe conditions.
+
+Additionally with distance sensors, we even used one for the intake, akin to last years intake! Last year, we utilized IR sensors to see where the ring was in the robot and ran the intake until the IR sensor was broken, and pulled back the piece a bit till the IRs saw eachother again. We utilized the exact same strategy (even the exact same code for awhile), but swapped the IRs with CTREs time of flight sensors! The reason we chose the distance sensors over the IRs is due to the fact that the distance sensors were more consistent, worked in more lighting conditions, didnt require a componenet on both ends, and didnt use the crappy rio ports. 
+
+
+In total, this year we heavily utilized sensors all around the robot to help autonomously run the robot in teleop and auton. I am super proud of the robot this year and am happy that it was able to make it to worlds. It truly shows the growth of my skill between the issues brought from the 2024 and 2025 robot.

@@ -12,30 +12,11 @@
     <script src = "/scripts.js"></script>
     <script>
 
-        function fetchAndDisplayText() {
-            console.log('Attempting to fetch text.txt...');
-            fetch('text.txt')
-                .then(response => {
-                    console.log('Fetch response received.');
-                    if (!response.ok) {
-                        throw new Error('Network response was not ok ' + response.statusText);
-                    }
-                    return response.text();
-                })
-                .then(text => {
-                    console.log('Text received:', text);
-                    // Set the fetched text as HTML content
-                    const textContainer = document.getElementById('textContainer');
-                    textContainer.innerHTML = text; // Use innerHTML to render HTML content
-                })
-                .catch(error => {
-                    console.error('There has been a problem with your fetch operation:', error);
-                });
-        }
+        
 
         window.onload = function() {
             loadNavbar();
-            fetchAndDisplayText();
+            fetchAndDisplayText('text.txt');
         };
     </script>
     <!-- Internal styles -->
@@ -43,14 +24,18 @@
 
 <body>
     <div id="NavBar"></div>
-    <div class="header">
+    <!--<div class="header">
         <div class="spacer layer1"></div>
-        <img src="/title.png" alt="Title Image" class="title" width="40%" height="auto">
+        <img src="/assets/images/title.png" alt="Title Image" class="title" width="40%" height="auto">
         <div id="emitter-container"></div>
-    </div>
-
+    </div>-->
+    
     <div class="mainBody">
-        <a href="../../../index.html" class="blogText">GO BACK</a>
+        <br><br><br>
+        <div class="contact">ComputerCraft Banking System</div>
+        <br><br>
+        <div class="warning">SOME PASTEBIN LINKS MAY NOT BE AVAILABLE ANYMORE</div>
+        <!--<a href="../../../index.html" class="blogText">GO BACK</a>-->
         <div id="textContainer" class="blogText"></div>
         <br><br><br><br><br><br><br><br><br><br><br><br>
         <div> </div>
