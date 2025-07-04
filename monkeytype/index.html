@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        
+    </head>
+    <body>
+        <div id = "ooo"></div>
+
+
+        <script>
+            let words = "abcdefghijklmnopqrstuvwxyz123456789!?., ";
+            let string = "";
+            let timer = 0;
+
+
+            
+            function checkTimer() {
+                let randomIndex = Math.floor(Math.random() * words.length);
+                let randomChar = words.charAt(randomIndex)
+                string = string + randomChar
+                document.getElementById("ooo").innerHTML = string   
+            }
+            setInterval(checkTimer, 10)
+            
+
+        </script>
+    </body>
+</html>
