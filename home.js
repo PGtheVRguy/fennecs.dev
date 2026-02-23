@@ -124,6 +124,22 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     }
+
+    function loadProjects() {
+        fetch("./projects.json")
+            .then((response => response.json()))
+            .then(json => {
+                json.reverse(); //reverses for some reason
+                const TPL_Results = item => 
+                    //output objects
+                `div class="Projects-item`;
+                document.querySelector("#results").innerHTML = json.map(item => TPL_Results(item)).join('');
+            })
+            .catch(error => console.error('error loading projects: ', error));
+    }
+
+
+
     window.addEventListener('scroll', handleMouseMove);
     document.addEventListener('mousemove', handleMouseMove);
 

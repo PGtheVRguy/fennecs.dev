@@ -587,6 +587,22 @@ hr.blog-line {
   border-radius: 10px;
 }
 
+/* PROJECTS */
+.projects-title {
+  font-size: xx-large;
+  font-family: font_IBM;
+  margin-left: 15%;
+  margin-right: 10%;
+}
+
+
+.projects-description {
+  font-size: large;
+  font-family: font_IBM;
+  margin-left: 20%;
+  margin-right: 30%;
+}
+
 @media (min-width: 900px) { /* desktop */
   .portfolio {  
     display: flex;

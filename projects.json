@@ -1,0 +1,20 @@
+[
+    {
+        "url": "./projects/ActionFox",
+        "name": "Action Fox",
+        "date": "PUT PROPER DATE",
+        "summary": "One of my larger projects that I spent some time in over the Summer working on. The player was given a semi complicated animation system, an enemy system that allowed for easily developing future enemies in a lego like module system, a camera that properly animates based on the player and environments around them, and a complicated menu system."
+    },
+    {
+      "url":"./projects/1984",
+      "name": "2025 Robotics Codebase",
+      "date": "put a real date",
+      "summary": "Summary"
+    },
+    {
+        "url": "./projects/1984",
+        "name": "1984 GameMaker Game",
+        "date": "PUT PROPER DATE",
+        "summary": "A school project made in GameMaker that I made within the spand of a week. The directions of the project werent directly for making a video game, but the teacher still graded it highly since it fit within the criteria of asking trivia about the book! The graphics were basic and quickly done on a touchpad but was my first time trying to handle a 'complicated' scoring system and a basic risk v reward system"
+    }
+]
