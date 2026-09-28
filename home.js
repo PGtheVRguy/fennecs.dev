@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', function() {
         particle.classList.add('particle');
 
         // Fetch a random fox image URL
-        if(currentMonth != 12)
+        if(currentMonth != 12) 
         {
             /*fetch('https://randomfox.ca/floof/')
             .then(response => response.json())
@@ -24,7 +24,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 particle.src = data.image; // Set particle.src to the fetched image URL
                 // Set initial position
                 particle.style.left = `${Math.random() * 100}%`;
-                particle.style.bottom = `-128px`; // Offset downward by its height
+                particle.style.bottom = `-128px`; 
                 container.appendChild(particle);
 
                 // Animate the particle
@@ -33,21 +33,21 @@ document.addEventListener('DOMContentLoaded', function() {
             .catch(error => {
                 console.error('Error fetching random fox image:', error);
                 // Fallback image in case of an error
-                particle.src = 'particle.jpg'; // Replace with your fallback image URL
+                particle.src = 'particle.jpg'; 
                 // Set initial position
                 particle.style.left = `${Math.random() * 100}%`;
-                particle.style.bottom = `64px`; // Offset downward by its height
+                particle.style.bottom = `64px`; 
                 container.appendChild(particle);
 
                 // Animate the particle
                 animateParticle(particle);
             });*/
         }
-        else
+        else //CHRISTMAS TIME!!!
         {
             if(snowAmount < 100)
             {
-            particle.src = '/assets/vector/snowball.svg'
+            particle.src = '/assets/vector/snowball.svg' //this is probably dumb
             particle.style.left = `${Math.random() * 100}%`;
             particle.style.top = '0';
             //particle.style.width = '10%';
